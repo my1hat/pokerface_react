@@ -1,0 +1,125 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.navbar {
+    height: 5rem;
+    left: 0;
+    line-height: 4rem;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    box-sizing: border-box;
+    background: rgba(17, 17, 17, 0.9);
+
+    .navbar__container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: stretch;
+        height: inherit;
+        line-height: inherit;
+        transform: translateY(0);
+        transition: opacity 1s ease;
+        min-height: 100%;
+        opacity: 1;
+        width: 100%;
+
+        .navbar__tel {
+            align-self: center;
+            text-decoration: none;
+            color: #fff;
+            @include fira(regular);
+        }
+
+        .navbar__logo {
+            width: 6rem;
+            height: 3rem;
+            align-self: center;
+        }
+
+
+
+        .nav {
+            height: inherit;
+            line-height: inherit;
+
+            .nav__list {
+                display: flex;
+                height: inherit;
+                line-height: inherit;
+                margin: 0;
+                text-align: right;
+
+                .nav__item {
+                    transform: translateY(0);
+                    transition: opacity 0.15s ease, transform 0.75s ease;
+                    opacity: 1;
+                    position: relative;
+                    padding: 0;
+                    display: block;
+                    height: inherit;
+                    line-height: inherit;
+                    margin: 0 0 0 2em;
+                    padding: 0;
+
+                    &:nth-child(1) {
+                        margin: 0;
+                    }
+                }
+
+                .nav__link {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $whiteLow;
+                    letter-spacing: 0.15rem;
+                    position: relative;
+                    padding: 0.5rem 0;
+                    display: block;
+                    transition: color 0.2s ease;
+                    border: 0;
+                    font-size: 0.8rem;
+                    outline: 0;
+                    cursor: pointer;
+
+                    &::before,
+                    &::after {
+                        border-radius: 0.25rem;
+                        bottom: 1.5rem;
+                        content: '';
+                        height: 2px;
+                        position: absolute;
+                        right: 0;
+                        width: 100%;
+                    }
+
+                    &::before {
+                        background: rgba(255, 255, 255, 0.125);
+                    }
+
+                    &::after {
+                        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.125), $song_color);
+                        transition: max-width 0.2s ease;
+                        max-width: 0;
+                    }
+
+                    &:hover {
+                        color: $whiteMedium;
+                    }
+
+                    &.active {
+                        background-color: inherit;
+                        color: #ffffff;
+
+                        &::after {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

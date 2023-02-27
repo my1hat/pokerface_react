@@ -1,0 +1,35 @@
+@import '../../styles/variables.scss';
+
+.intro {
+    background: url(../../images/IMG_8152.jpg) #111;
+    background-attachment: fixed;
+    // background-position: 100% 0%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    // background-blend-mode: exclusion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    color: $white;
+}
+
+.titles {
+    background-color: rgba(0, 0, 0, 0.813);
+    display: inline-block;
+
+
+}
+
+.titles__main,
+.titles__desc {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.titles__desc {
+    font-size: 1.3rem;
+    font-weight: 200;
+}

@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+
+.contacts {
+    background-color: white;
+    color: black;
+}
+
+.contacts__wrapper {
+    display: flex;
+
+    .form {
+        border-right: solid 1px $line;
+        width: 60%;
+    }
+
+    .manager {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .manager-item {
+            text-align: center;
+        }
+
+        .manager__title {
+            // color: #ffffff;
+            font-weight: bold;
+            line-height: 1.5;
+            margin: 0 0 0.5rem 0;
+            display: block;
+            // font-size: $h3;
+            text-align: center;
+        }
+
+        .manager__img {
+            width: 10rem;
+            height: 10rem;
+            border: 2px solid $line;
+            border-radius: 50%;
+
+        }
+    }
+
+}

@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: flex-start;
+    width: calc(100% + 2rem);
+    margin: 0 0 2rem 0rem;
+
+    .field {
+        // margin: 0 0 2rem 0;
+        width: calc(50% - 0.5rem);
+
+        .field__label {
+
+            line-height: 1.5;
+            display: block;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        // input[type="tel"] {
+        //     background-image: url(../../images/icons/plus.svg);
+        //     background-repeat: no-repeat;
+        //     background-size: 0.6rem 0.6rem;
+        //     background-position: 0.8rem 1rem;
+        //     padding: 0 1.4rem;
+        // }
+        .input__wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 2.75rem;
+            // appearance: none;
+            background: rgba(0, 0, 0, 0.061);
+            border-radius: 0.25rem;
+            border: unset;
+            // outline: 0;
+            padding: 0 1rem;
+            // text-decoration: none;
+            width: 50%;
+
+            .input__plus {
+                font-size: 1.1rem;
+                // color: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        .field__input {
+            color: #000000;
+            appearance: none;
+            background: unset;
+            border: none;
+            outline: 0;
+            width: 100%;
+
+            &:focus {
+                border-color: none;
+            }
+        }
+    }
+}

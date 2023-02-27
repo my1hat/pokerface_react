@@ -1,0 +1,42 @@
+@import-normalize;
+
+.swiper {
+    display: flex;
+    max-width: 900px;
+    max-height: 600px;
+    border-radius: 0.25rem;
+    box-shadow: 0.6rem 0.5rem 0.2rem black, 0.5rem 1rem 5rem rgba(255, 255, 255, 0.25);
+    aspect-ratio: 3/2;
+
+    .swiper-scrollbar-drag {
+        background: #d56565;
+    }
+
+    .swiper-pagination-bullet {
+        background: var(--swiper-pagination-bullet-inactive-color, #ec7777);
+        width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 0.7rem));
+        height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 0.7rem));
+    }
+
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--swiper-navigation-color, #d56565);
+}
+
+html:root {
+    --swiper-theme-color: #d56565;
+}
+
+.swiper-slide {
+    .swiper-slide__img {
+        width: 100%;
+        aspect-ratio: 3/2;
+    }
+
+    .vertical {
+        object-fit: contain;
+    }
+}
