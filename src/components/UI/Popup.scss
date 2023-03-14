@@ -1,0 +1,21 @@
+.trackItem.hidden {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.popup-titles {
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+  color: rgba(0, 0, 0, 0.605);
+  letter-spacing: -1px;
+  min-width: 35rem;
+}
+
+.popup-length {
+  float: right;
+  padding-right: 1rem;
+}
+
+.popup__title-song {
+  padding-left: 5rem;
+}

@@ -16,8 +16,29 @@
         transition: opacity 0.2s ease-in-out;
         cursor: pointer;
 
+
         &:hover {
             opacity: 1;
+
+            .vkIcon {
+                color: #5181bb;
+            }
+
+            .ytIcon {
+                color: red;
+            }
+
+            .tgIcon {
+                color: rgb(90, 132, 216);
+            }
+
+            .igIcon {
+                color: rgb(224, 107, 228);
+            }
+
+            .waIcon {
+                color: rgb(22, 204, 22);
+            }
         }
 
         .socialsIcon {
@@ -28,6 +49,7 @@
             font-size: 1rem;
             line-height: 1rem;
             transform: translate(-50%, -50%);
+
 
         }
     }

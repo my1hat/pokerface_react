@@ -12,7 +12,7 @@ const theme = createTheme({
     },
   },
 });
-const color = 'rgba(17, 17, 17, 0.9)';
+// const color = 'rgba(17, 17, 17, 0.9)';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {

@@ -1,5 +1,8 @@
 import './About.scss';
 import { Link } from 'react-scroll';
+import Photo from './Photo';
+// import Button from '@mui/material/Button';
+// import Box from '@mui/material/Box';
 
 function About() {
   return (
@@ -15,7 +18,7 @@ function About() {
         Pokerface подходит для любой публики с разными музыкальными вкусами.
         Музыканты чувствуют настроение зрителей и всегда удачно выбирают
         следующую песню. Выступления проходят на любых праздничных мероприятиях:
-        корпоративный вечер, день рождения, свадьба и т.д.
+        корпоративный вечер, день рождения, свадьба и многие другие.
       </p>
       <p className="paragraph">
         В{' '}
@@ -30,13 +33,14 @@ function About() {
           репертуар
         </Link>{' '}
         включены лучшие песни из дискотеки 80-х, 90-х, зарубежного и
-        отечественного рока, современных поп хитов и т.д.
+        отечественного рока, современных поп-хитов и не только.
       </p>
-
-      <div className="vk-group">
+      <Photo />
+      {/* <div className="vk-group">
         <div id="vk_groups"></div>
-      </div>
+      </div> */}
     </>
   );
 }
+
 export default About;

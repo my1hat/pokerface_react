@@ -14,6 +14,7 @@
     position: fixed;
     box-sizing: border-box;
     background: rgba(17, 17, 17, 0.9);
+    backdrop-filter: blur(10px);
 
     .navbar__container {
         display: flex;
@@ -74,7 +75,7 @@
                 .nav__link {
                     text-decoration: none;
                     text-transform: uppercase;
-                    color: $whiteLow;
+                    color: $white;
                     letter-spacing: 0.15rem;
                     position: relative;
                     padding: 0.5rem 0;
@@ -97,17 +98,32 @@
                     }
 
                     &::before {
-                        background: rgba(255, 255, 255, 0.125);
+                        background: rgb(255, 255, 255);
+                        transition: max-width 0.2s ease;
+                        max-width: 0;
                     }
 
                     &::after {
-                        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.125), $song_color);
+                        background-image: linear-gradient(to right, rgba(255, 255, 255, 0.125), rgb(255, 255, 255));
                         transition: max-width 0.2s ease;
                         max-width: 0;
                     }
 
                     &:hover {
-                        color: $whiteMedium;
+                        color: #fff;
+
+                        &::after {
+
+                            transition: max-width 0.2s ease;
+                            max-width: 100%;
+                        }
+
+                        &::before {
+
+
+                            max-width: 100%;
+                        }
+
                     }
 
                     &.active {
@@ -115,7 +131,9 @@
                         color: #ffffff;
 
                         &::after {
+                            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.496), red);
                             max-width: 100%;
+                            transition: max-width 0.2s ease;
                         }
                     }
                 }

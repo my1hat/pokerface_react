@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import TracksContext from '../context/TracksContext';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
+import Tooltip from '@mui/material/Tooltip';
 import DialogTitle from '@mui/material/DialogTitle';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import CartIcon from './CartIcon';
+import './Popup.scss';
 
-export default function Popup({ count, tracks, deleteSong }) {
+export default function Popup({ count }) {
   const [open, setOpen] = useState(false);
+  const { tracks, setTracks } = useContext(TracksContext);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -18,43 +21,85 @@ export default function Popup({ count, tracks, deleteSong }) {
   const handleClose = () => {
     setOpen(false);
   };
-  const deleteSongHandler = () => {
-    tracks.map((track) => {
-      deleteSong(track.author, track.song, track.length, !track.isActive);
-    });
+
+  const handleCleanTracks = () => {
+    setTracks(tracks.filter((track) => !track));
+    setOpen(false);
+  };
+
+  const deleteSongHandler = (song) => {
+    const updatedTracks = tracks.map((track) =>
+      track.song === song ? { ...track, hidden: true } : track
+    );
+    setTracks(updatedTracks);
+    setTimeout(() => {
+      setTracks(updatedTracks.filter((track) => track.song !== song));
+    }, 200);
+    if (tracks.length === 1) {
+      handleClose();
+    }
   };
 
   return (
     <div>
       <CartIcon count={count} onClick={handleClickOpen} />
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={handleClose} maxWidth="md">
         <DialogTitle>Ваш сет-лист</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            <span>Композиция</span>
-            <span style={{ float: 'right' }}>Длительность</span>
-          </DialogContentText>
+          <ul className="popup-titles">
+            <li>
+              <span className="popup__title-song">Композиция</span>
+              <span className="popup-length">Длительность</span>
+            </li>
+          </ul>
           <ul>
-            {/* <DialogContentText> */}
             {tracks.map((track) => {
               return (
-                <li key={track.song}>
-                  <span>{track.author}</span> -{' '}
-                  <span style={{ paddingRight: '1rem' }}>{track.song}</span>{' '}
-                  <DeleteForeverIcon
-                    sx={{ float: 'right' }}
-                    onClick={deleteSongHandler}
-                  />
-                  <span style={{ float: 'right' }}>{track.length}</span>
+                <li
+                  key={track.song}
+                  className={`trackItem ${track.hidden ? 'hidden' : ''}`}
+                >
+                  <span className="songs-list__author popup-author">
+                    {track.author}
+                  </span>{' '}
+                  -{' '}
+                  <span className="popup-song" style={{ paddingRight: '1rem' }}>
+                    {track.song}
+                  </span>{' '}
+                  <Tooltip title="удалить">
+                    <DeleteForeverIcon
+                      sx={{ float: 'right' }}
+                      // titleAccess="удалить"
+                      onClick={() => {
+                        deleteSongHandler(track.song);
+                        setTracks(
+                          tracks.map((t) => {
+                            if (t.song === track.song) {
+                              return { ...t, hidden: true };
+                            }
+                            return t;
+                          })
+                        );
+                      }}
+                    />
+                  </Tooltip>
+                  <span className="popup-length">{track.length}</span>
                 </li>
               );
             })}
-            {/* </DialogContentText> */}
           </ul>
+          {tracks.length === 0 && <div className="noTracks">Список пуст</div>}
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={handleClose}>Subscribe</Button>
+          <Button variant="outlined" onClick={handleCleanTracks}>
+            Очистить
+          </Button>
+          <Button variant="outlined" onClick={handleClose}>
+            Закрыть
+          </Button>
+          <Button variant="contained" onClick={handleClose}>
+            Далее
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

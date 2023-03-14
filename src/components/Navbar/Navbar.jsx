@@ -12,10 +12,8 @@ function Navbar() {
         <Logo section="navbar" />
         <nav className="nav">
           <ul className="nav__list">
-            <NavItem name="Начальная" link="intro" />
             <NavItem name="О нас" link="about" />
-            <NavItem name="Услуги" link="features" />
-            <NavItem name="Контент" link="media" />
+            <NavItem name="Видео" link="media" />
             <NavItem name="Репертуар" link="songs" />
             <NavItem name="Контакты" link="contacts" />
           </ul>

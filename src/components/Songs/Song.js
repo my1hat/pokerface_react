@@ -1,19 +1,26 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import TracksContext from '../context/TracksContext';
 
 function Song(props) {
-  const { author, song, length, addSong, isActive } = props;
+  const { author, song, length, id, addSong } = props;
+  const { tracks } = useContext(TracksContext);
   const [checked, setChecked] = useState(false);
 
-  // console.log(props);
-
   const handleToggle = () => {
-    setChecked(!checked);
-    checked && addSong(author, song, length, isActive); //Если песня не выбрана
-    !checked && addSong(author, song, length, !isActive); //Если песня выбрана
+    addSong(author, song, length, id); //Добавляем песню в массив
   };
+
+  useEffect(() => {
+    setChecked(
+      tracks.find((track) => {
+        return track.id === id;
+      })
+    );
+  }, [tracks, id]); //Устанавливаем класс, только если песня есть в корзине
+
   return (
     <li
-      className={`songs-list__song-row ${!checked ? '' : 'checked'}`}
+      className={`songs-list__song-row ${checked ? 'checked' : ''}`}
       onClick={handleToggle}
     >
       <span className="songs-list__author">{author}</span> -{' '}
