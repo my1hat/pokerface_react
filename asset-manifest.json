@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/pokerface_react/static/css/main.b03bba2f.css",
-    "main.js": "/pokerface_react/static/js/main.1d9679a3.js",
+    "main.css": "/pokerface_react/static/css/main.c73b4f09.css",
+    "main.js": "/pokerface_react/static/js/main.90da3777.js",
     "static/css/88.e3da82d9.chunk.css": "/pokerface_react/static/css/88.e3da82d9.chunk.css",
     "static/js/88.2f69b049.chunk.js": "/pokerface_react/static/js/88.2f69b049.chunk.js",
     "static/media/IMG_8042.jpg": "/pokerface_react/static/media/IMG_8042.9e2b3807d42a738618c5.jpg",
@@ -22,13 +22,13 @@
     "static/media/preview1.jpg": "/pokerface_react/static/media/preview1.c6e8a98cd043311abbe2.jpg",
     "static/media/icons8-youtube-play.svg": "/pokerface_react/static/media/icons8-youtube-play.03f834bd7cc8968b2c19.svg",
     "index.html": "/pokerface_react/index.html",
-    "main.b03bba2f.css.map": "/pokerface_react/static/css/main.b03bba2f.css.map",
-    "main.1d9679a3.js.map": "/pokerface_react/static/js/main.1d9679a3.js.map",
+    "main.c73b4f09.css.map": "/pokerface_react/static/css/main.c73b4f09.css.map",
+    "main.90da3777.js.map": "/pokerface_react/static/js/main.90da3777.js.map",
     "88.e3da82d9.chunk.css.map": "/pokerface_react/static/css/88.e3da82d9.chunk.css.map",
     "88.2f69b049.chunk.js.map": "/pokerface_react/static/js/88.2f69b049.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b03bba2f.css",
-    "static/js/main.1d9679a3.js"
+    "static/css/main.c73b4f09.css",
+    "static/js/main.90da3777.js"
   ]
 }
