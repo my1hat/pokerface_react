@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/pokerface_react/static/css/main.ad3d4cf7.css",
-    "main.js": "/pokerface_react/static/js/main.ac69662d.js",
-    "static/css/88.ae1746c4.chunk.css": "/pokerface_react/static/css/88.ae1746c4.chunk.css",
-    "static/js/88.8c5f8d3e.chunk.js": "/pokerface_react/static/js/88.8c5f8d3e.chunk.js",
+    "main.css": "/pokerface_react/static/css/main.b03bba2f.css",
+    "main.js": "/pokerface_react/static/js/main.1d9679a3.js",
+    "static/css/88.e3da82d9.chunk.css": "/pokerface_react/static/css/88.e3da82d9.chunk.css",
+    "static/js/88.2f69b049.chunk.js": "/pokerface_react/static/js/88.2f69b049.chunk.js",
     "static/media/IMG_8042.jpg": "/pokerface_react/static/media/IMG_8042.9e2b3807d42a738618c5.jpg",
     "static/media/IMG_8152.jpg": "/pokerface_react/static/media/IMG_8152.b00cfa1a2ae3ec1d1767.jpg",
     "static/media/IMG_8017.jpg": "/pokerface_react/static/media/IMG_8017.5829093bb5acad684771.jpg",
@@ -16,19 +16,19 @@
     "static/media/avatar.jpg": "/pokerface_react/static/media/avatar.d80ebae21c00aec35ecd.jpg",
     "static/media/IMG_8179.jpg": "/pokerface_react/static/media/IMG_8179.801114e1ec72b1f7a362.jpg",
     "static/media/PokerFace_logo_1.png": "/pokerface_react/static/media/PokerFace_logo_1.ff0cc9d1b06d388ac07c.png",
+    "static/media/preview4.jpg": "/pokerface_react/static/media/preview4.2a6b071d5285a5e5084e.jpg",
     "static/media/preview3.jpg": "/pokerface_react/static/media/preview3.47b8da73b1aa02c2947f.jpg",
     "static/media/preview2.jpg": "/pokerface_react/static/media/preview2.1056734d56adf8fbc47e.jpg",
     "static/media/preview1.jpg": "/pokerface_react/static/media/preview1.c6e8a98cd043311abbe2.jpg",
-    "static/media/about.svg": "/pokerface_react/static/media/about.0bf592bd107de08934a3.svg",
     "static/media/icons8-youtube-play.svg": "/pokerface_react/static/media/icons8-youtube-play.03f834bd7cc8968b2c19.svg",
     "index.html": "/pokerface_react/index.html",
-    "main.ad3d4cf7.css.map": "/pokerface_react/static/css/main.ad3d4cf7.css.map",
-    "main.ac69662d.js.map": "/pokerface_react/static/js/main.ac69662d.js.map",
-    "88.ae1746c4.chunk.css.map": "/pokerface_react/static/css/88.ae1746c4.chunk.css.map",
-    "88.8c5f8d3e.chunk.js.map": "/pokerface_react/static/js/88.8c5f8d3e.chunk.js.map"
+    "main.b03bba2f.css.map": "/pokerface_react/static/css/main.b03bba2f.css.map",
+    "main.1d9679a3.js.map": "/pokerface_react/static/js/main.1d9679a3.js.map",
+    "88.e3da82d9.chunk.css.map": "/pokerface_react/static/css/88.e3da82d9.chunk.css.map",
+    "88.2f69b049.chunk.js.map": "/pokerface_react/static/js/88.2f69b049.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad3d4cf7.css",
-    "static/js/main.ac69662d.js"
+    "static/css/main.b03bba2f.css",
+    "static/js/main.1d9679a3.js"
   ]
 }
