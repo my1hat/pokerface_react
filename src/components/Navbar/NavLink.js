@@ -8,7 +8,7 @@ function NavLink({ name, link }) {
         to={link}
         spy={true}
         smooth={true}
-        offset={0}
+        offset={-75}
         duration={500}
       >
         {name}

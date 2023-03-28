@@ -10,6 +10,9 @@ const theme = createTheme({
     primary: {
       main: '#a4a4a4',
     },
+    secondary: {
+      main: '#202020',
+    },
   },
 });
 // const color = 'rgba(17, 17, 17, 0.9)';
@@ -17,6 +20,7 @@ const theme = createTheme({
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
     border: `2px solid transparent`,
+    fontFamily: 'inherit',
   },
 }));
 
@@ -26,21 +30,23 @@ export default function CartIcon({ count, onClick }) {
       <Slide direction="left" in={count !== 0} mountOnEnter unmountOnExit>
         <IconButton
           className="mui-fixed"
-          aria-label="cart"
-          color="primary"
+          color="error"
           size="large"
           onClick={onClick}
           sx={{
             position: 'fixed',
-            right: '1rem',
-            top: '6rem',
+            right: '5rem',
+            top: '8rem',
             zIndex: 1001,
           }}
         >
           <StyledBadge
             badgeContent={count}
-            color="error"
+            color="secondary"
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            overlap="rectangular"
+            variant="standard"
+            // sx={{ fontFamily: 'unset !important' }}
           >
             <ShoppingCartIcon fontSize="large" />
           </StyledBadge>

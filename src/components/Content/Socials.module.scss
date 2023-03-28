@@ -1,7 +1,10 @@
+@import '../../styles/variables.scss';
+
 .socialsWrapper {
     align-self: center;
     line-height: 1;
     justify-self: unset;
+    margin: 0 2rem 0 2rem;
 
     .socialsItem {
         width: 1.5rem;
@@ -15,6 +18,10 @@
         opacity: 0.4;
         transition: opacity 0.2s ease-in-out;
         cursor: pointer;
+
+        &:nth-child(5) {
+            margin-right: 0;
+        }
 
 
         &:hover {
@@ -45,7 +52,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            color: #111;
+            color: $bkrndNavBar;
             font-size: 1rem;
             line-height: 1rem;
             transform: translate(-50%, -50%);

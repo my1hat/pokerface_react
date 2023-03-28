@@ -11,7 +11,7 @@ import './Songs.scss';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#e3e3e3',
+      main: '#f5f5f5',
       my: '#000000',
     },
     secondary: {
@@ -25,7 +25,20 @@ const theme = createTheme({
 function Songs({ lang, addSong }) {
   return (
     <ThemeProvider theme={theme}>
-      <Accordion elevation={2} sx={{ backgroundColor: 'primary.light' }}>
+      <Accordion
+        className="accordion"
+        elevation={2}
+        sx={{
+          backgroundColor: 'primary.light',
+          width: '40%',
+          margin: 'auto',
+          transition: 'width 1s ease',
+          // '&.Mui-expanded': {
+          //   width: '50rem',
+          //   margin: 'auto',
+          // },
+        }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon color="secondary" />}
           aria-controls="panel1a-content"

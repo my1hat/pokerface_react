@@ -9,7 +9,7 @@ function Socials() {
     <div className={styles.socialsWrapper}>
       <Tooltip title="Вконтакте">
         <a
-          className={`${styles.socialsItem} `}
+          className={styles.socialsItem}
           href="https://vk.com/pokerfacecoverband"
           target="_blank"
           rel="noreferrer"

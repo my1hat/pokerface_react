@@ -6,7 +6,8 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import Tooltip from '@mui/material/Tooltip';
 import DialogTitle from '@mui/material/DialogTitle';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
 import CartIcon from './CartIcon';
 import './Popup.scss';
 
@@ -40,6 +41,17 @@ export default function Popup({ count }) {
     }
   };
 
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#a4a4a4',
+      },
+      secondary: {
+        main: '#202020',
+      },
+    },
+  });
+
   return (
     <div>
       <CartIcon count={count} onClick={handleClickOpen} />
@@ -67,7 +79,7 @@ export default function Popup({ count }) {
                     {track.song}
                   </span>{' '}
                   <Tooltip title="удалить">
-                    <DeleteForeverIcon
+                    <DeleteForeverRoundedIcon
                       sx={{ float: 'right' }}
                       // titleAccess="удалить"
                       onClick={() => {
@@ -91,15 +103,21 @@ export default function Popup({ count }) {
           {tracks.length === 0 && <div className="noTracks">Список пуст</div>}
         </DialogContent>
         <DialogActions>
-          <Button variant="outlined" onClick={handleCleanTracks}>
-            Очистить
-          </Button>
-          <Button variant="outlined" onClick={handleClose}>
-            Закрыть
-          </Button>
-          <Button variant="contained" onClick={handleClose}>
-            Далее
-          </Button>
+          <ThemeProvider theme={theme}>
+            <Button
+              variant="outlined"
+              color="secondary"
+              onClick={handleCleanTracks}
+            >
+              Очистить
+            </Button>
+            <Button variant="outlined" color="secondary" onClick={handleClose}>
+              Закрыть
+            </Button>
+            <Button variant="contained" color="error" onClick={handleClose}>
+              Далее
+            </Button>
+          </ThemeProvider>
         </DialogActions>
       </Dialog>
     </div>

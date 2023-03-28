@@ -2,6 +2,7 @@
 @import '../../styles/fonts.scss';
 
 .navbar {
+    background: $bkrndNavBar;
     height: 5rem;
     left: 0;
     line-height: 4rem;
@@ -10,15 +11,17 @@
     text-align: center;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 2;
     position: fixed;
     box-sizing: border-box;
-    background: rgba(17, 17, 17, 0.9);
+    // background: rgba(17, 17, 17);
     backdrop-filter: blur(10px);
+    padding: 0 2rem;
 
     .navbar__container {
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
+        justify-content: flex-end;
         flex-direction: row;
         align-items: stretch;
         height: inherit;
@@ -33,13 +36,16 @@
             align-self: center;
             text-decoration: none;
             color: #fff;
-            @include fira(regular);
+            @include font(extraLight);
         }
 
         .navbar__logo {
             width: 6rem;
             height: 3rem;
             align-self: center;
+            margin-right: auto;
+            // background: url(../../images/pokerface_logo.svg) no-repeat center/cover;
+            // color: #fff;
         }
 
 
@@ -70,6 +76,10 @@
                     &:nth-child(1) {
                         margin: 0;
                     }
+
+                    // &:nth-child(4) {
+                    //     margin-right: 2rem;
+                    // }
                 }
 
                 .nav__link {
@@ -131,7 +141,7 @@
                         color: #ffffff;
 
                         &::after {
-                            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.496), red);
+                            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.261), $red);
                             max-width: 100%;
                             transition: max-width 0.2s ease;
                         }
@@ -140,4 +150,15 @@
             }
         }
     }
+}
+
+.navbar__phone-button {
+    align-self: center;
+
+    @include font(extraLight);
+}
+
+.snack-menu__logo {
+    width: 6rem;
+    height: 3rem;
 }

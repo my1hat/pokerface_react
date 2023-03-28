@@ -1,35 +1,75 @@
 @import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
 
 .intro {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7)), url(../../images/IMG_8152.jpg) #111;
-    background-attachment: fixed;
-    // background-position: 100% 0%;
-    background-size: 100% auto;
+    background: url(../../images/head_photo.jpg) #202020;
+    // background-attachment: fixed;
+    // background-position: 50% 0%;
+    background-size: 100% 128%;
     background-repeat: no-repeat;
     // background-blend-mode: exclusion;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    // align-items: stretch;
+    // min-height: calc(100vh + 50pt);
     min-height: 100vh;
-    color: $white;
+    color: black;
+    margin-top: 5rem;
+    // row-gap: 1rem;
 }
 
 .titles {
-    background-color: rgba(0, 0, 0, 0.813);
-    display: inline-block;
+    width: 50%;
+    margin: 30vh 25vw 0 30vw;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        // border-top: 50px solid red;
+        border-bottom: 8rem solid #ffffff;
+        border-right: 0.5rem solid transparent;
+        border-left: 1rem solid transparent;
+        position: absolute;
+        left: 8rem;
+        top: -7rem;
+
+    }
 
 
 }
 
 .titles__main,
 .titles__desc {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
     font-size: 2rem;
-    text-align: center;
-    margin: 0;
+    text-align: right;
+    margin: 0 0 0.5rem 0;
+    border-radius: 0.5rem;
+    @include font(regular);
 }
 
+.titles__main {
+    padding: 0 1rem;
+}
+
+// .titles__div-desc {}
+
 .titles__desc {
+    position: relative;
+    left: 7rem;
     font-size: 1.3rem;
-    font-weight: 200;
+    // font-weight: 200;
+    // float: right;
+    // margin: auto;
+    padding: 0 1rem 0 0;
+    width: 24rem;
+}
+
+.intro__button {
+    width: 12rem;
+    height: 3rem;
 }

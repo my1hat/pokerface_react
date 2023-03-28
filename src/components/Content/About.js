@@ -1,6 +1,8 @@
 import './About.scss';
 import { Link } from 'react-scroll';
-import Photo from './Photo';
+import { lazy, Suspense } from 'react';
+const Photo = lazy(() => import('./Photo'));
+// import Photo from './Photo';
 // import Button from '@mui/material/Button';
 // import Box from '@mui/material/Box';
 
@@ -26,7 +28,7 @@ function About() {
           to="songs"
           spy={true}
           smooth={true}
-          offset={0}
+          offset={-70}
           duration={500}
           className="paragraph__link paragraph__link_red"
         >
@@ -35,10 +37,9 @@ function About() {
         включены лучшие песни из дискотеки 80-х, 90-х, зарубежного и
         отечественного рока, современных поп-хитов и не только.
       </p>
-      <Photo />
-      {/* <div className="vk-group">
-        <div id="vk_groups"></div>
-      </div> */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <Photo />
+      </Suspense>
     </>
   );
 }

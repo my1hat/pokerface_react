@@ -1,31 +1,85 @@
+// @font-face {
+//     font-family: 'FiraBold';
+//     src: url(/fonts/FiraSans/FiraSans-Bold.ttf);
+// }
+// @font-face {
+//     font-family: 'FiraLight';
+//     src: url(/fonts/FiraSans/FiraSans-Light.ttf);
+// }
+// @font-face {
+//     font-family: 'FiraRegular';
+//     src: url(/fonts/FiraSans/FiraSans-Regular.ttf);
+// }
+// @font-face {
+//     font-family: 'FiraMedium';
+//     src: url(/fonts/FiraSans/FiraSans-Medium.ttf);
+// }
+
+// @mixin fira($style: regular) {
+//     @if $style == regular {
+//         font-family: 'FiraRegular';
+//     }
+//     @if $style == bold {
+//         font-family: 'FiraBold';
+//     }    
+//     @if $style == medium {
+//         font-family: 'FiraMedium';
+//     }    
+//     @if $style == light {
+//         font-family: 'FiraLight';
+//     }    
+// }
+
+// @font-face {
+//     font-family: 'FiraBold';
+//     src: url(/fonts/FiraSans/FiraSans-Bold.ttf);
+// }
 @font-face {
-    font-family: 'FiraBold';
-    src: url(/fonts/FiraSans/FiraSans-Bold.ttf);
-}
-@font-face {
-    font-family: 'FiraLight';
-    src: url(/fonts/FiraSans/FiraSans-Light.ttf);
-}
-@font-face {
-    font-family: 'FiraRegular';
-    src: url(/fonts/FiraSans/FiraSans-Regular.ttf);
-}
-@font-face {
-    font-family: 'FiraMedium';
-    src: url(/fonts/FiraSans/FiraSans-Medium.ttf);
+    font-display: swap;
+    font-family: 'RobotoMedium';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/Roboto_Slab/roboto-slab-v24-cyrillic-500.woff2) format('woff2'), url(../fonts/Roboto_Slab/roboto-slab-v24-cyrillic-500.woff) format('woff');
 }
 
-@mixin fira($style: regular) {
-    @if $style == regular {
-        font-family: 'FiraRegular';
+@font-face {
+    font-display: swap;
+    font-family: 'RobotoRegular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/Roboto_Slab/roboto-slab-v24-cyrillic-regular.woff2) format('woff2'), url(../fonts/Roboto_Slab/roboto-slab-v24-cyrillic-regular.woff) format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'IbmLight';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/IBM_Plex_Sans/ibm-plex-sans-v14-cyrillic_cyrillic-ext_latin-300.woff2) format('woff2'), url(../fonts/IBM_Plex_Sans/ibm-plex-sans-v14-cyrillic_cyrillic-ext_latin-300.woff) format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'IbmExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    src: url(../fonts/IBM_Plex_Sans/ibm-plex-sans-v14-cyrillic_cyrillic-ext_latin-200.woff2) format('woff2'), url(../fonts/IBM_Plex_Sans/ibm-plex-sans-v14-cyrillic_cyrillic-ext_latin-200.woff) format('woff');
+}
+
+@mixin font($style: regular) {
+    @if $style ==medium {
+        font-family: 'RobotoMedium';
     }
-    @if $style == bold {
-        font-family: 'FiraBold';
-    }    
-    @if $style == medium {
-        font-family: 'FiraMedium';
-    }    
-    @if $style == light {
-        font-family: 'FiraLight';
-    }    
+
+    @if $style ==regular {
+        font-family: 'RobotoRegular';
+    }
+
+    @if $style ==light {
+        font-family: 'IbmLight';
+    }
+
+    @if $style ==extraLight {
+        font-family: 'IbmExtraLight';
+    }
 }

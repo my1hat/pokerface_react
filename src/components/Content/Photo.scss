@@ -1,89 +1,43 @@
-// @import-normalize;
-
-// .swiper {
-//     display: flex;
-//     max-width: 900px;
-//     max-height: 600px;
-//     border-radius: 0.25rem;
-//     box-shadow: 0.6rem 0.5rem 0.2rem black, 0.5rem 1rem 5rem rgba(255, 255, 255, 0.25);
-//     aspect-ratio: 3/2;
-
-//     .swiper-scrollbar-drag {
-//         background: #fe3939;
-//     }
-
-//     .swiper-pagination-bullet {
-//         background: var(--swiper-pagination-bullet-inactive-color, #fe3939);
-//         width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 0.7rem));
-//         height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 0.7rem));
-//     }
-
-
+// .swiper-button-next,
+// .swiper-button-prev {
+//     color: var(--swiper-navigation-color, #fe3939);
 // }
-
 .swiper-button-next,
 .swiper-button-prev {
-    color: var(--swiper-navigation-color, #fe3939);
+    color: var(--swiper-navigation-color, rgba(0, 0, 0, 0.208));
 }
 
-// html:root {
-//     --swiper-theme-color: #fe3939;
-// }
 
-// .swiper-slide {
-//     .swiper-slide__img {
-//         width: 100%;
-//         aspect-ratio: 3/2;
-//     }
-
-//     .vertical {
-//         object-fit: contain;
-//     }
-// }
 
 .swiper {
     width: 100%;
     height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.swiper-slide img {
+
+.swiper-slide__img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    // object-fit: cover;
+    // aspect-ratio: 9/6;
 }
 
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-
-}
 
 .swiper-slide {
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-.mainSwiper {
-    height: 80%;
     width: 100%;
-    border-radius: 5px;
+    height: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-size: cover;
+    // background-position: center;
 }
+
+
 
 .minSwiper {
     height: 20%;
@@ -101,6 +55,9 @@
 
     .swiper-slide-thumb-active {
         opacity: 1;
-        // border-radius: 5px;
     }
 }
+
+// .swiper-horizontal {
+//     touch-action: none;
+// }

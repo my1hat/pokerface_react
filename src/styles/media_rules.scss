@@ -1,0 +1,226 @@
+@media screen and (min-width: 1600px) {
+    html {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    html {
+        font-size: 18px;
+    }
+
+    .intro {
+        background-size: 120% 120%;
+    }
+}
+
+@media screen and (max-width: 1337px) {
+    .intro {
+        background-size: 120% auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+
+    .intro {
+        background-size: 110% 120%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro {
+        background-size: 120% 130%;
+    }
+
+    .MuiAccordion-root.Mui-expanded.accordion {
+        width: 100%;
+    }
+
+    .paragraph {
+        padding: 0 15%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    html {
+        font-size: 15px;
+    }
+
+    .intro {
+        background-size: 120% 110%;
+        // background-position: top;
+    }
+}
+
+@media screen and (max-width: 908px) {
+    .container {
+        padding: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 15px;
+    }
+
+    .intro {
+        background-attachment: unset;
+        background-size: cover;
+        background-position: 50% 70%;
+        min-height: 80vh;
+    }
+
+    .features {
+        .features-wrap {
+            gap: 1rem
+        }
+
+    }
+
+    .intro {
+        margin-top: 3.7rem;
+    }
+
+    .navbar {
+        height: 3.7rem !important;
+
+    }
+
+    // .navbar__logo {
+    //     display: none;
+    // }
+
+}
+
+@media screen and (max-width: 778px) {
+    .intro {
+        background-size: 180% 100%;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    html {
+        font-size: 14px;
+    }
+
+    .intro {
+        background-attachment: unset;
+    }
+
+    .container {
+        padding: 1rem !important;
+    }
+
+    .features-wrap {
+        justify-content: center !important;
+
+        .features__card {
+            width: 90% !important;
+        }
+    }
+
+    .raider-wrapper {
+        flex-wrap: wrap;
+        gap: 2rem !important;
+    }
+
+    .MuiButtonBase-root.MuiButton-root.raider-button {
+        width: 16.2rem;
+    }
+
+    .MuiAccordionDetails-root {
+        padding: 0.3rem 0.3rem !important;
+    }
+
+    .songs-list__song-row {
+        padding: 0.75rem 1rem !important;
+
+        &.checked {
+            &::before {
+                content: none !important;
+            }
+        }
+    }
+
+    .minSwiper {
+        padding: 5px 0 !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .intro {
+        min-height: 70vh;
+        background-size: 200% 100%;
+        background-position: 50% 60%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .intro {
+        min-height: 80vh;
+        background-size: 250vw 100vh;
+        background-position: 35% 50%;
+    }
+
+    .container {
+        padding: 1rem 0.3rem;
+    }
+
+    .navbar {
+        z-index: 9000 !important;
+    }
+
+    .titles__main {
+        font-size: 1.5rem;
+    }
+
+    .titles__desc {
+        font-size: 1rem;
+    }
+
+    .paragraph {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .songs-list__song-row {
+        font-size: 11px !important;
+        padding: 0.75rem 0.3rem !important;
+
+
+    }
+
+    .songs-list__header {
+        font-size: 1rem !important;
+    }
+
+    .MuiPaper-root.MuiAccordion-root {
+        width: 60%;
+    }
+
+    .video-container {
+        gap: 1.3rem !important;
+
+        .video-container__item {
+            flex-basis: 100% !important;
+            box-shadow: 0.2rem 0.2rem 0.1rem black, 0rem 0rem 0rem rgba(255, 255, 255, 0.218), inset -0.7rem -0.6rem 0.4rem rgba(0, 0, 0, 0.714) !important;
+
+            &:hover {
+                box-shadow: 0.4rem 0.5rem 0.3rem black, 0.3rem 0.5rem 1.5rem rgba(255, 255, 255, 0.39), inset 0.2rem 0.4rem 0.2rem rgba(255, 255, 255, 0.107) !important;
+            }
+        }
+    }
+
+
+}
