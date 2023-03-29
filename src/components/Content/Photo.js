@@ -9,7 +9,7 @@ import 'swiper/scss/zoom';
 import './Photo.scss';
 
 import ph_8117 from '../../images/IMG_8117.jpg';
-import ph_8152 from '../../images/IMG_8152.jpg';
+import ph_8164 from '../../images/IMG_8164.jpg';
 import ph_8017 from '../../images/IMG_8017.jpg';
 import ph_8179 from '../../images/IMG_8179.jpg';
 import ph_8089 from '../../images/IMG_8089.jpg';
@@ -100,7 +100,7 @@ function Photo() {
             <div className="swiper-zoom-container">
               <img
                 className="swiper-slide__img"
-                src={ph_8152}
+                src={ph_8164}
                 loading="lazy"
                 alt="Pokerface"
               />
@@ -175,7 +175,7 @@ function Photo() {
           <SwiperSlide>
             <img
               className="swiper-slide__img"
-              src={ph_8152}
+              src={ph_8164}
               loading="lazy"
               alt="Pokerface"
             />

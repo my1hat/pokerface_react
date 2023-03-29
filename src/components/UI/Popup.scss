@@ -1,6 +1,14 @@
+@import '../../styles/fonts.scss';
+
 .trackItem.hidden {
   opacity: 0;
   transition: opacity 0.2s ease-out;
+}
+
+.trackItem {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .popup-titles {
@@ -8,14 +16,61 @@
   padding-bottom: 0.3rem;
   color: rgba(0, 0, 0, 0.605);
   letter-spacing: -1px;
-  min-width: 35rem;
+  // min-width: 35rem;
+
+  // &__row {
+  //   display: flex;
+  //   justify-content: space-between;
+
+  // }
+}
+
+.popup-song {
+  padding-right: 2rem;
+}
+
+.popup__title-length {
+  float: right;
+  padding-right: 1rem;
 }
 
 .popup-length {
-  float: right;
+  margin-left: auto;
   padding-right: 1rem;
 }
 
 .popup__title-song {
   padding-left: 5rem;
+}
+
+.popup__header {
+  font-family: RobotoRegular !important;
+}
+
+.popup-total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+  grid-template-areas:
+    'header header'
+    'songs length';
+  width: 100%;
+  // height: fit-content;
+  margin: 0 auto;
+
+  .popup-total__title {
+    grid-area: header;
+    text-align: center;
+    font-family: RobotoRegular;
+  }
+
+  .popup-total__songs {
+    grid-area: songs;
+    text-align: center;
+  }
+
+  .popup-total__length {
+    grid-area: length;
+    text-align: center;
+  }
 }

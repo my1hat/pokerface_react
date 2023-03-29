@@ -15,31 +15,51 @@
         font-size: 18px;
     }
 
+    // .titles {
+    //     &::before {
+    //         left: 30%;
+    //     }
+    // }
+
     .intro {
         background-size: 120% 120%;
+        background-position: 50% 0%;
     }
 }
 
-@media screen and (max-width: 1337px) {
-    .intro {
-        background-size: 120% auto;
-    }
-}
+// @media screen and (max-width: 1337px) {
+//     .intro {
+//         background-size: 120% auto;
+//     }
+// }
 
 @media screen and (max-width: 1200px) {
     html {
         font-size: 16px;
     }
 
-    .intro {
-        background-size: 110% 120%;
-    }
+    // .intro {
+    //     background-size: 110% 120%;
+    // }
+
+    // .titles {
+    //     &::before {
+    //         left: 34%;
+    //     }
+    // }
 }
 
 @media screen and (max-width: 1100px) {
     .intro {
-        background-size: 120% 130%;
+        background-size: 130% 115%;
+        background-position: 50% 0%;
     }
+
+    // .titles {
+    //     &::before {
+    //         left: 34%;
+    //     }
+    // }
 
     .MuiAccordion-root.Mui-expanded.accordion {
         width: 100%;
@@ -75,8 +95,17 @@
     .intro {
         background-attachment: unset;
         background-size: cover;
-        background-position: 50% 70%;
+        background-position: 50% 0%;
         min-height: 80vh;
+    }
+
+    .titles {
+        // margin: 10vh 21vw 0;
+        width: auto;
+
+        &__desc {
+            left: 5rem;
+        }
     }
 
     .features {
@@ -102,10 +131,14 @@
 }
 
 @media screen and (max-width: 778px) {
-    .intro {
-        background-size: 180% 100%;
-        background-position: center;
-    }
+    // .intro {
+    //     background-size: 180% 100%;
+    //     background-position: center;
+    // }
+
+    // .titles {
+    //     margin: 10vh 11vw 0;
+    // }
 }
 
 @media screen and (max-width: 625px) {
@@ -113,8 +146,13 @@
         font-size: 14px;
     }
 
-    .intro {
-        background-attachment: unset;
+    .titles {
+        &::before {
+            border-bottom: 5rem solid #ffffff;
+            top: -4.1rem;
+        }
+
+
     }
 
     .container {
@@ -161,29 +199,74 @@
 
     .intro {
         min-height: 70vh;
-        background-size: 200% 100%;
-        background-position: 50% 60%;
+        background-size: 167% 110%;
+        background-position: 50% 0%;
+    }
+
+    .titles {
+        // margin: 8vh 5vw 0;
+
+        // &::before {
+        //     border-bottom: 7rem solid #ffffff;
+        //     left: 10rem;
+        //     top: -6.4rem;
+        // }
+
+        &__main {
+            font-size: 1.5rem;
+        }
+
+        &__desc {
+            font-size: 1.2rem;
+            // width: 20rem;
+        }
+
+
     }
 }
 
 @media screen and (max-width: 450px) {
     .intro {
         min-height: 80vh;
-        background-size: 250vw 100vh;
-        background-position: 35% 50%;
+        background-size: 174vw 80vh;
+        background-position: 50% 50%;
+    }
+
+    .titles {
+        display: flex;
+        // margin: 5rem 3vw 0;
+        flex-direction: column;
+        min-width: 0;
+
+        &::before {
+            left: 23%;
+            top: -4.5rem
+        }
+
+        &__main {
+            font-size: 1.2rem;
+        }
+
+        &__desc {
+            // left: 2rem !important;
+            position: static;
+            font-size: 1.1rem;
+            max-width: 20rem;
+            min-width: 0;
+        }
     }
 
     .container {
         padding: 1rem 0.3rem;
     }
 
-    .navbar {
-        z-index: 9000 !important;
-    }
+    // .navbar {
+    //     z-index: 9000 !important;
+    // }
 
-    .titles__main {
-        font-size: 1.5rem;
-    }
+    // .titles__main {
+    //     font-size: 1.5rem;
+    // }
 
     .titles__desc {
         font-size: 1rem;
@@ -203,6 +286,24 @@
 
     .songs-list__header {
         font-size: 1rem !important;
+    }
+
+    .popup {
+
+        &-author,
+        &-song,
+        &-length {
+            font-size: 0.7rem;
+
+        }
+
+        &-song {
+            padding-right: 1rem !important;
+        }
+
+        &-length {
+            padding-right: 0.5rem !important;
+        }
     }
 
     .MuiPaper-root.MuiAccordion-root {

@@ -69,7 +69,7 @@ function App() {
               sx={{
                 display: 'flex',
                 justifyContent: 'center',
-                // marginTop: '1rem',
+                marginBottom: '2rem',
               }}
             >
               <Link

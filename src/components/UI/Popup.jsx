@@ -51,17 +51,23 @@ export default function Popup({ count }) {
       },
     },
   });
+  const totalLength = tracks.reduce(
+    (acc, curr) => acc + parseFloat(curr.length),
+    0
+  );
 
   return (
     <div>
       <CartIcon count={count} onClick={handleClickOpen} />
-      <Dialog open={open} onClose={handleClose} maxWidth="md">
-        <DialogTitle>Ваш сет-лист</DialogTitle>
+      <Dialog open={open} onClose={handleClose} maxWidth="lg" fullScreen>
+        <DialogTitle className="popup__header" sx={{ fontFamily: 'unset' }}>
+          Ваш сет-лист
+        </DialogTitle>
         <DialogContent>
           <ul className="popup-titles">
-            <li>
+            <li className="popup-titles__row">
               <span className="popup__title-song">Композиция</span>
-              <span className="popup-length">Длительность</span>
+              <span className="popup__title-length ">Длительность</span>
             </li>
           </ul>
           <ul>
@@ -72,12 +78,14 @@ export default function Popup({ count }) {
                   className={`trackItem ${track.hidden ? 'hidden' : ''}`}
                 >
                   <span className="songs-list__author popup-author">
-                    {track.author}
-                  </span>{' '}
-                  -{' '}
-                  <span className="popup-song" style={{ paddingRight: '1rem' }}>
-                    {track.song}
-                  </span>{' '}
+                    {track.author}&nbsp;
+                  </span>
+                  <span className="songs-list__song popup-song">
+                    &ndash;&nbsp;{track.song}
+                  </span>
+                  <span className="songs-list__length popup-length">
+                    {track.length}
+                  </span>
                   <Tooltip title="удалить">
                     <DeleteForeverRoundedIcon
                       sx={{ float: 'right' }}
@@ -95,12 +103,21 @@ export default function Popup({ count }) {
                       }}
                     />
                   </Tooltip>
-                  <span className="popup-length">{track.length}</span>
                 </li>
               );
             })}
           </ul>
           {tracks.length === 0 && <div className="noTracks">Список пуст</div>}
+          <div className="popup-total">
+            <div className="popup-total__title">Итого:</div>
+            <div className="popup-total__songs">Песен:&nbsp;{count}</div>
+            <div className="popup-total__length">
+              Общее время:&nbsp;{totalLength}
+              {/* {tracks.map((track) => {
+                return parseFloat(track.length);
+              })} */}
+            </div>
+          </div>
         </DialogContent>
         <DialogActions>
           <ThemeProvider theme={theme}>

@@ -23,7 +23,7 @@ function Song(props) {
       className={`songs-list__song-row ${checked ? 'checked' : ''}`}
       onClick={handleToggle}
     >
-      <span className="songs-list__author">{author}</span> -{' '}
+      <span className="songs-list__author">{author}</span> &ndash;{' '}
       <span className="songs-list__song">{song}</span>
       <span className="songs-list__length">{length}</span>
     </li>
