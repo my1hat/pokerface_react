@@ -6,7 +6,7 @@
 }
 
 .contacts__card {
-    transform-style: preserve-3d;
+    // transform-style: preserve-3d;
     box-shadow:
         // -7px -7px 20px 0px #fff9,
         // -4px -4px 5px 0px #fff9,
@@ -44,7 +44,8 @@
     // }
     .manager-item {
         text-align: center;
-        transform: translateZ(60px);
+        // transform: translateZ(60px);
+        z-index: 0;
     }
 
     .manager__title {

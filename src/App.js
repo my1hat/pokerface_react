@@ -121,15 +121,15 @@ function App() {
               </p>
               <Songs lang="Отечественные" addSong={addSongHandler} />
               <Songs lang="Зарубежные" addSong={addSongHandler} />
-              <p className="paragraph after-songs-list">
-                Длительность выступления минимум 90 минут. Сеты можно разделить
-                как Вам удобно. Например: 3 по 30 минут или 2 по 45 минут.
-              </p>
             </Container>
           </Section>
           <Box
             className="button-wrapper-songs"
-            sx={{ display: 'flex', justifyContent: 'center' }}
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              paddingTop: '1rem',
+            }}
           >
             <TiltParalax>
               <Button
@@ -137,8 +137,8 @@ function App() {
                 color="error"
                 size="large"
                 endIcon={<DownloadIcon />}
-                href="https://disk.yandex.ru/d/ug8jsUuvOAowZA"
-                target="_blank"
+                href="/Pokerface_songs.pdf"
+                download="Pokerface_songs.pdf"
               >
                 Скачать весь репертуар
               </Button>
@@ -160,8 +160,8 @@ function App() {
                 endIcon={<DownloadIcon />}
                 size="large"
                 color="error"
-                href="https://disk.yandex.ru/i/S2YOUbQRfuMDrQ"
-                target="_blank"
+                href="/Pokerface_Bytovoi_Rider.pdf"
+                download="Pokerface_Bytovoi_Rider.pdf"
               >
                 Бытовой райдер
               </Button>
@@ -173,8 +173,8 @@ function App() {
                 endIcon={<DownloadIcon />}
                 color="error"
                 size="large"
-                href="https://disk.yandex.ru/i/ksLFWK08r50sCg"
-                target="_blank"
+                href="/Pokerface_Tech_Rider.pdf"
+                download="Pokerface_Tech_Rider.pdf"
               >
                 Технический райдер
               </Button>

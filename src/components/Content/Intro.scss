@@ -38,6 +38,16 @@
 
     }
 
+    &::after {
+        content: '';
+        width: 0.8rem;
+        height: 1.4rem;
+        background-color: #ffffff;
+        position: absolute;
+        right: 40%;
+        top: 33%;
+    }
+
 
 }
 

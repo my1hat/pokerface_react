@@ -26,7 +26,7 @@ function Contacts() {
           href="tel:+79264610236"
           color="error"
           startIcon={<PhoneIcon />}
-          sx={{ transform: 'translateY(-10px) translateZ(80px)' }}
+          // sx={{ transform: 'translateY(-10px) translateZ(80px)' }}
         >
           +7 (926) 461-02-36
         </Button>
