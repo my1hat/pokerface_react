@@ -10,12 +10,18 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+
+
+  .songs-list__play-button {
+    // flex-basis: auto;
+    margin: 0 0 0 auto;
+  }
 }
 
 .popup-titles {
   font-size: 0.9rem;
   padding-bottom: 0.3rem;
-  color: rgba(0, 0, 0, 0.605);
+  color: #777;
   letter-spacing: -1px;
   // min-width: 35rem;
 
@@ -36,8 +42,8 @@
 }
 
 .popup-length {
-  margin-left: auto;
-  padding-right: 1rem;
+  margin: 0;
+  // padding-right: 1rem;
 }
 
 .popup__title-song {

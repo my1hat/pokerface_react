@@ -235,8 +235,8 @@
 
 @media screen and (max-width: 450px) {
     .intro {
-        min-height: 80vh;
-        background-size: 174vw 80vh;
+        min-height: 50vh;
+        background-size: 150vw 50vh;
         background-position: 50% 50%;
     }
 
@@ -252,8 +252,9 @@
         min-width: 0;
 
         &::before {
-            left: 23%;
-            top: -4.5rem
+            left: 25%;
+            top: -1.3rem;
+            border-bottom: 1.7rem solid #ffffff;
         }
 
         &::after {
@@ -266,12 +267,12 @@
         }
 
         &__desc {
-            // left: 2rem !important;
-            position: static;
+            left: 1.8rem !important;
+            // position: static;
             font-size: 1.1rem;
-            max-width: 20rem;
+            max-width: 16rem;
             min-width: 0;
-            letter-spacing: -1.9px;
+            letter-spacing: -1.7px;
         }
     }
 
@@ -297,8 +298,8 @@
     }
 
     .songs-list__song-row {
-        font-size: 11px !important;
-        padding: 0.75rem 0.3rem !important;
+        font-size: 12px !important;
+        padding: 0.75rem 0.75rem !important;
 
         &.checked {
             border-radius: 7px !important;
@@ -347,4 +348,44 @@
     }
 
 
+}
+
+@media screen and (max-height: 450px) {
+    .intro {
+        min-height: 100vh;
+        background-size: 115vw 100vh;
+        background-position: 50% 50%;
+    }
+
+    .titles {
+        display: flex;
+        // margin: 5rem 3vw 0;
+        flex-direction: column;
+        min-width: 0;
+        margin: 15% auto 0 auto;
+
+        &::before {
+            left: 27%;
+            top: -2rem;
+            border-bottom: 2rem solid #ffffff;
+        }
+
+        &::after {
+            top: 26%;
+            height: 1.2rem;
+        }
+
+        &__main {
+            font-size: 1.2rem;
+        }
+
+        &__desc {
+            // left: 2rem !important;
+            position: static;
+            font-size: 1.1rem;
+            max-width: 20rem;
+            min-width: 0;
+            letter-spacing: -1.9px;
+        }
+    }
 }

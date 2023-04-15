@@ -23,9 +23,9 @@
     font-weight: 100;
 }
 
-.songs-list__length {
-    float: right;
-}
+// .songs-list__length {
+//     float: right;
+// }
 
 .songs-list__header {
     margin: 0;
@@ -33,29 +33,69 @@
 
 }
 
+
+
 .songs-list__song,
 .songs-list__length {
-    color: inherit;
+    color: #777;
     font-family: IbmLight;
+    transition: color 0.8s ease
 }
 
 .songs-list__author {
     @include font(medium);
+    grid-area: author;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
+.songs-list__song {
+    grid-area: song;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.songs-list__length {
+    grid-area: length;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.songs-list__play-button {
+    grid-area: play;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .songs-list__song-row {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        'play author length'
+        ' play song length'
+    ;
     cursor: pointer;
     position: relative;
     padding: 0.75rem 2.2rem;
     font-size: 1rem;
-    transition: 0.2s;
     user-select: none;
     text-decoration: initial;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 70%);
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgb(0, 0, 0, 0.0) 50%);
     transition: background-image 1s ease, border-radius 0.2s ease, color 0.5s ease;
     border-radius: 0;
-    margin: 0.2rem 0;
+    margin: 0.8rem 0;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.187);
+    // transition: box-shadow 0.2s ease-in-out;
+    border-radius: 5px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 
     &:last-child {
         margin-bottom: 0;
@@ -66,6 +106,7 @@
     .songs-list__length {
         pointer-events: none;
 
+
     }
 
     // &:nth-child(odd) {
@@ -74,7 +115,7 @@
     &:hover {
         background: #fff;
 
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.208);
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.208), 1px 2px 2px 1px white;
 
     }
 
@@ -84,6 +125,11 @@
         color: #fff;
         box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.493);
         border-radius: 17px;
+
+        .songs-list__song,
+        .songs-list__length {
+            color: #ffffffa5;
+        }
 
 
 

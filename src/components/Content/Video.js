@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 // import TiltVideo from '../settings/TiltVideo';
 import './Video.scss';
 
@@ -17,8 +18,20 @@ function Video() {
 
   return (
     <>
-      <h2 className="section-title">Видео</h2>
-      <p className="paragraph">
+      <motion.h2
+        className="section-title"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+      >
+        Видео
+      </motion.h2>
+      <motion.p
+        className="paragraph"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+      >
         Вы можете помотреть другие видео c нашими выступлениями непосредственно
         на{' '}
         <a
@@ -33,10 +46,14 @@ function Video() {
         <a className="paragraph__link_blue " href="#contacts">
           соц.сетях.
         </a>
-      </p>
+      </motion.p>
       <div className="video-container">
         {/* <TiltVideo classEnter="video-container__item"> */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.55 }}
+          viewport={{ once: true }}
           className={`video-container__item preview-2 ${
             videoIndex === 0 ? 'active' : ''
           }`}
@@ -53,10 +70,14 @@ function Video() {
               autoPlay
             />
           )}
-        </div>
+        </motion.div>
         {/* </TiltVideo> */}
         {/* <TiltVideo classEnter="video-container__item"> */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          viewport={{ once: true }}
           className={`video-container__item preview-1 ${
             videoIndex === 1 ? 'active' : ''
           }`}
@@ -72,10 +93,14 @@ function Video() {
               allowFullScreen
             />
           )}
-        </div>
+        </motion.div>
         {/* </TiltVideo> */}
         {/* <TiltVideo classEnter="video-container__item"> */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.65 }}
+          viewport={{ once: true }}
           className={`video-container__item preview-3 ${
             videoIndex === 2 ? 'active' : ''
           }`}
@@ -91,10 +116,14 @@ function Video() {
               allowFullScreen
             />
           )}
-        </div>
+        </motion.div>
         {/* </TiltVideo> */}
         {/* <TiltVideo classEnter="video-container__item"> */}
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          viewport={{ once: true }}
           className={`video-container__item preview-4 ${
             videoIndex === 3 ? 'active' : ''
           }`}
@@ -110,7 +139,7 @@ function Video() {
               allowFullScreen
             />
           )}
-        </div>
+        </motion.div>
         {/* </TiltVideo> */}
       </div>
     </>

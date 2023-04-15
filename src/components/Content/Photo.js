@@ -1,6 +1,8 @@
 import { Navigation, Thumbs, Zoom } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 import Box from '@mui/material/Box';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
@@ -18,7 +20,11 @@ import ph_8042 from '../../images/IMG_8042.jpg';
 function Photo() {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ delay: 0.5 }}
+    >
       <Box
         sx={{
           display: 'flex',
@@ -192,7 +198,7 @@ function Photo() {
           </SwiperSlide>
         </Swiper>
       </Box>
-    </>
+    </motion.div>
   );
 }
 export default Photo;

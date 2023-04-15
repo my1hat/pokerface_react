@@ -63,7 +63,7 @@
 }
 
 .titles__main {
-    padding: 0 1rem;
+    padding: 0 1rem 0.4rem 1rem;
 }
 
 // .titles__div-desc {}
@@ -75,8 +75,9 @@
     // font-weight: 200;
     // float: right;
     // margin: auto;
-    padding: 0 1rem 0 0;
-    width: 24rem;
+    padding: 0.5rem 1rem 0.8rem 1rem;
+    width: 23rem;
+    line-height: 1.3;
 }
 
 .intro__button {

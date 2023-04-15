@@ -110,7 +110,7 @@ export default function Popup({ count }) {
         <Dialog
           open={open}
           onClose={handleClose}
-          maxWidth="lg"
+          maxWidth="md"
           fullScreen={matches}
         >
           <DialogTitle className="popup__header" sx={{ fontFamily: 'unset' }}>
@@ -128,7 +128,7 @@ export default function Popup({ count }) {
             <ul className="popup-titles">
               <li className="popup-titles__row">
                 <span className="popup__title-song">Композиция</span>
-                <span className="popup__title-length ">Длительность</span>
+                {/* <span className="popup__title-length ">Длительность</span> */}
               </li>
             </ul>
             <ul>
@@ -138,31 +138,35 @@ export default function Popup({ count }) {
                     key={track.song}
                     className={`trackItem ${track.hidden ? 'hidden' : ''}`}
                   >
-                    <span className="songs-list__author popup-author">
+                    <div className="songs-list__author popup-author">
                       {track.author}&nbsp;
-                    </span>
-                    <span className="songs-list__song popup-song">
-                      &ndash;&nbsp;{track.song}
-                    </span>
-                    <span className="songs-list__length popup-length">
-                      {track.length}
-                    </span>
+                    </div>
+                    <div className="songs-list__song popup-song">
+                      &mdash;&nbsp;{track.song}
+                    </div>
                     <Tooltip title="удалить">
-                      <DeleteForeverRoundedIcon
-                        sx={{ float: 'right' }}
-                        onClick={() => {
-                          deleteSongHandler(track.song);
-                          setTracks(
-                            tracks.map((t) => {
-                              if (t.song === track.song) {
-                                return { ...t, hidden: true };
-                              }
-                              return t;
-                            })
-                          );
-                        }}
-                      />
+                      <div className="songs-list__play-button">
+                        <IconButton
+                          color="inherit"
+                          onClick={() => {
+                            deleteSongHandler(track.song);
+                            setTracks(
+                              tracks.map((t) => {
+                                if (t.song === track.song) {
+                                  return { ...t, hidden: true };
+                                }
+                                return t;
+                              })
+                            );
+                          }}
+                        >
+                          <DeleteForeverRoundedIcon />
+                        </IconButton>
+                      </div>
                     </Tooltip>
+                    <div className="songs-list__length popup-length">
+                      {track.length.replace('.', ':')}
+                    </div>
                   </li>
                 );
               })}
@@ -240,24 +244,12 @@ export default function Popup({ count }) {
                   : { vertical: 'top', horizontal: 'center' }
               }
               open={openSnack}
-              // color="error"
               autoHideDuration={3000}
               onClose={handleCloseSnack}
-              // message="Сет-лист скопирован!"
-              // action={
-              //   <IconButton
-              //     aria-label="close"
-              //     color="inherit"
-              //     sx={{ p: 0.5 }}
-              //     onClick={handleCloseSnack}
-              //   >
-              //     <CloseIcon />
-              //   </IconButton>
-              // }
-              sx={matches ? { marginBottom: '3rem' } : ''}
+              sx={matches ? { marginBottom: '3.4rem' } : null}
             >
               <MuiAlert
-                elevation={6}
+                elevation={2}
                 variant="filled"
                 onClose={handleCloseSnack}
                 severity="success"
