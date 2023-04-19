@@ -1,8 +1,8 @@
 .widgets-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     // flex-direction: column;
     // align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }

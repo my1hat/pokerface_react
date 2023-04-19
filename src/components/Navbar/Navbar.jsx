@@ -127,7 +127,7 @@ function Navbar() {
                   </MenuItem>
                 </Link>
                 <Link
-                  to="media"
+                  to="video"
                   spy={true}
                   smooth={true}
                   offset={-50}
@@ -203,8 +203,8 @@ function Navbar() {
             <nav className="nav">
               <ul className="nav__list">
                 <NavItem name="О нас" link="about" />
-                <NavItem name="Видео" link="media" />
-                <NavItem name="Репертуар" link="songs" />
+                <NavItem name="Видео" link="video" />
+                <NavItem name="Репертуар" link="songs-list" />
                 <NavItem name="Райдеры" link="raiders" />
               </ul>
             </nav>

@@ -1,5 +1,4 @@
-import { useContext, useState } from 'react';
-import TracksContext from '../context/TracksContext';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -21,10 +20,10 @@ import CartIcon from './CartIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './Popup.scss';
 
-export default function Popup({ count }) {
+export default function Popup({ count, tracks, setTracks }) {
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
-  const { tracks, setTracks } = useContext(TracksContext);
+  // const { tracks, setTracks } = useContext(TracksContext);
   // const [copied, setCopied] = useState(false);
 
   // const handleCopy = () => {

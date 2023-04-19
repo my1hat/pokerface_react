@@ -59,9 +59,7 @@
 
 .songs-list__length {
     grid-area: length;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+
 }
 
 .songs-list__play-button {
@@ -69,16 +67,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    // flex-wrap: wrap;
+    // max-width: rem;
+
+    min-width: 6rem;
+
 }
+
+
+
+.songs-list__play-button-no-audio {
+    grid-row: span 2;
+    width: 6rem;
+
+}
+
+.play-bar {
+    grid-area: volumeBar;
+    width: 100%;
+}
+
+.song-list__no-audio-text {
+    text-align: center;
+    // color: #777;
+}
+
+// .songs-list__author,
+// .songs-list__song,
+// .songs-list__length,
+// .progress {
+//     align-self: center;
+// }
+
+.progress {
+    grid-area: time;
+    // display: block;
+    font-size: 0.9rem;
+    // color: #777;
+    text-align: center;
+    cursor: auto;
+    justify-self: center;
+}
+
 
 .songs-list__song-row {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
-        'play author length'
-        ' play song length'
+        'play author -'
+        'play song length'
+        'time . .'
+        'volumeBar volumeBar volumeBar'
     ;
+    align-items: center;
     cursor: pointer;
     position: relative;
     padding: 0.75rem 2.2rem;
@@ -92,10 +134,10 @@
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.187);
     // transition: box-shadow 0.2s ease-in-out;
     border-radius: 5px;
-
     text-overflow: ellipsis;
-    white-space: nowrap;
+    // white-space: nowrap;
     overflow: hidden;
+    column-gap: 0.5rem;
 
     &:last-child {
         margin-bottom: 0;

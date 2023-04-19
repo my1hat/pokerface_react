@@ -4,7 +4,8 @@ function TiltParalax({ classEnter, children }) {
   return (
     <Tilt
       className={classEnter}
-      perspective={500}
+      perspective={1000}
+      glareBorderRadius={50}
       glareEnable={true}
       glareMaxOpacity={0.25}
       scale={1.02}

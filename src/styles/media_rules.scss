@@ -22,8 +22,8 @@
     // }
 
     .intro {
-        background-size: 120% 120%;
-        background-position: 50% 0%;
+        background-size: 120% 120% !important;
+        background-position: 50% 0% !important;
     }
 }
 
@@ -51,8 +51,8 @@
 
 @media screen and (max-width: 1100px) {
     .intro {
-        background-size: 130% 115%;
-        background-position: 50% 0%;
+        background-size: 130% 115% !important;
+        background-position: 50% 0% !important;
     }
 
     // .titles {
@@ -76,7 +76,7 @@
     }
 
     .intro {
-        background-size: 120% 110%;
+        background-size: 120% 110% !important;
         // background-position: top;
     }
 }
@@ -93,34 +93,34 @@
     }
 
     .intro {
-        background-attachment: unset;
-        background-size: cover;
-        background-position: 50% 0%;
-        min-height: 80vh;
+        background-attachment: unset !important;
+        background-size: cover !important;
+        background-position: 50% 0% !important;
+        min-height: 80vh !important;
     }
 
     .titles {
         // margin: 10vh 21vw 0;
-        width: auto;
+        width: auto !important;
 
         &__desc {
-            left: 5rem;
+            left: 5rem !important;
         }
 
         &::after {
-            right: 25%;
+            right: 25% !important;
         }
     }
 
     .features {
         .features-wrap {
-            gap: 1rem
+            gap: 1rem !important;
         }
 
     }
 
     .intro {
-        margin-top: 3.7rem;
+        margin-top: 3.7rem !important;
     }
 
     .navbar {
@@ -152,8 +152,8 @@
 
     .titles {
         &::before {
-            border-bottom: 5rem solid #ffffff;
-            top: -4.1rem;
+            border-bottom: 5rem solid #ffffff !important;
+            top: -4.1rem !important;
         }
 
 
@@ -202,9 +202,9 @@
 @media screen and (max-width: 550px) {
 
     .intro {
-        min-height: 70vh;
-        background-size: 167% 110%;
-        background-position: 50% 0%;
+        min-height: 70vh !important;
+        background-size: 167% 110% !important;
+        background-position: 50% 0% !important;
     }
 
     .titles {
@@ -217,15 +217,15 @@
         // }
 
         &::after {
-            top: 28%;
+            top: 28% !important;
         }
 
         &__main {
-            font-size: 1.5rem;
+            font-size: 1.5rem !important;
         }
 
         &__desc {
-            font-size: 1.2rem;
+            font-size: 1.2rem !important;
             // width: 20rem;
         }
 
@@ -235,9 +235,9 @@
 
 @media screen and (max-width: 450px) {
     .intro {
-        min-height: 50vh;
-        background-size: 150vw 50vh;
-        background-position: 50% 50%;
+        min-height: 50vh !important;
+        background-size: 150vw 50vh !important;
+        background-position: 50% 50% !important;
     }
 
     .about {
@@ -246,39 +246,39 @@
     }
 
     .titles {
-        display: flex;
+        display: flex !important;
         // margin: 5rem 3vw 0;
-        flex-direction: column;
-        min-width: 0;
+        flex-direction: column !important;
+        min-width: 0 !important;
 
         &::before {
-            left: 25%;
-            top: -1.3rem;
-            border-bottom: 1.7rem solid #ffffff;
+            left: 25% !important;
+            top: -1.3rem !important;
+            border-bottom: 1.7rem solid #ffffff !important;
         }
 
         &::after {
-            top: 26%;
-            height: 1.2rem;
+            top: 26% !important;
+            height: 1.2rem !important;
         }
 
         &__main {
-            font-size: 1.2rem;
+            font-size: 1.2rem !important;
         }
 
         &__desc {
             left: 1.8rem !important;
             // position: static;
-            font-size: 1.1rem;
-            max-width: 16rem;
-            min-width: 0;
-            letter-spacing: -1.7px;
+            font-size: 1.1rem !important;
+            max-width: 16rem !important;
+            min-width: 0 !important;
+            letter-spacing: -1.7px !important;
         }
     }
 
-    .container {
-        padding: 1rem 0.3rem;
-    }
+    // .container {
+    //     padding: 1rem 0.3rem !important;
+    // }
 
     // .navbar {
     //     z-index: 9000 !important;
@@ -289,7 +289,7 @@
     // }
 
     .titles__desc {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .paragraph {
@@ -352,40 +352,41 @@
 
 @media screen and (max-height: 450px) {
     .intro {
-        min-height: 100vh;
-        background-size: 115vw 100vh;
-        background-position: 50% 50%;
+        min-height: 100vh !important;
+        background-size: 100% !important;
+        background-position: 50% 0% !important;
+        margin-top: 3.7rem !important;
     }
 
     .titles {
-        display: flex;
+        display: flex !important;
         // margin: 5rem 3vw 0;
-        flex-direction: column;
-        min-width: 0;
-        margin: 15% auto 0 auto;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        margin: 15% auto 0 auto !important;
 
         &::before {
-            left: 27%;
-            top: -2rem;
-            border-bottom: 2rem solid #ffffff;
+            left: 27% !important;
+            top: -2rem !important;
+            border-bottom: 2rem solid #ffffff !important;
         }
 
         &::after {
-            top: 26%;
-            height: 1.2rem;
+            top: 26% !important;
+            height: 1.2rem !important;
         }
 
         &__main {
-            font-size: 1.2rem;
+            font-size: 1.2rem !important;
         }
 
         &__desc {
             // left: 2rem !important;
-            position: static;
-            font-size: 1.1rem;
-            max-width: 20rem;
-            min-width: 0;
-            letter-spacing: -1.9px;
+            position: static !important;
+            font-size: 1.1rem !important;
+            max-width: 20rem !important;
+            min-width: 0 !important;
+            letter-spacing: -1.9px !important;
         }
     }
 }
