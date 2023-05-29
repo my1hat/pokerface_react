@@ -25,7 +25,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.35 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="features-wrap__icon-container">
                 <GiTrophyCup className="features-wrap__icon" />
@@ -42,7 +42,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
             >
               <div className="features-wrap__icon-container">
                 <TfiWorld className="features-wrap__icon" />
@@ -58,7 +58,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.45 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="features-wrap__icon-container">
                 <GiDrumKit className="features-wrap__icon" />
@@ -75,7 +75,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
             >
               <div className="features-wrap__icon-container">
                 <GiSpeaker className="features-wrap__icon" />
@@ -91,7 +91,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.55 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
             >
               <div className="features-wrap__icon-container">
                 <MdMoneyOff className="features-wrap__icon" />
@@ -108,7 +108,7 @@ function Features() {
               className="features-wrap__item"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
             >
               <div className="features-wrap__icon-container">
                 <MdEventAvailable className="features-wrap__icon" />

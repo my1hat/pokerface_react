@@ -21,6 +21,7 @@
     font-size: 0.8rem;
     color: $darkText;
     font-weight: 100;
+    margin-right: 0.5rem;
 }
 
 // .songs-list__length {
@@ -84,7 +85,8 @@
 
 .play-bar {
     grid-area: volumeBar;
-    width: 100%;
+    // width: 100%;
+    // padding: 0 1rem;
 }
 
 .song-list__no-audio-text {
@@ -130,7 +132,7 @@
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.0), rgb(0, 0, 0, 0.0) 50%);
     transition: background-image 1s ease, border-radius 0.2s ease, color 0.5s ease;
     border-radius: 0;
-    margin: 0.8rem 0;
+    margin: 0.8rem 0.4rem;
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.187);
     // transition: box-shadow 0.2s ease-in-out;
     border-radius: 5px;
@@ -215,4 +217,25 @@
 .raiders,
 .button-wrapper-songs {
     background-color: $bkrndLight;
+}
+
+.songs-list-link__download {
+    text-decoration: none;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.184);
+    border: 1px #d32f2f solid;
+    border-radius: 4px;
+    min-width: 64px;
+    padding: 6px 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    width: 15rem;
+    text-align: center;
+    background-color: #d32f2f;
+    color: #fff;
+    font-family: IBMLight;
+
+    &:active {
+        color: #d32f2f;
+        background-color: #f5f5f5;
+
+    }
 }

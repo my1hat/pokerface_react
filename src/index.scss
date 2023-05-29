@@ -157,7 +157,7 @@ html:root {
 .MuiButtonBase-root.MuiButton-root {
   text-transform: capitalize;
   // font-family: inherit;
-  @include font(light);
+  @include font(regular);
 }
 
 .MuiButtonBase-root.MuiButton-root.raider-button {

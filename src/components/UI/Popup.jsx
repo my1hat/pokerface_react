@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -20,7 +20,7 @@ import CartIcon from './CartIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './Popup.scss';
 
-export default function Popup({ count, tracks, setTracks }) {
+const Popup = ({ count, tracks, setTracks }) => {
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
   // const { tracks, setTracks } = useContext(TracksContext);
@@ -104,8 +104,8 @@ export default function Popup({ count, tracks, setTracks }) {
   )}\nКол-во песен: ${count}\nОбщее время выступления: ${totalLength}`;
   return (
     <div>
+      <CartIcon count={count} onClick={handleClickOpen} />
       <ThemeProvider theme={theme}>
-        <CartIcon count={count} onClick={handleClickOpen} />
         <Dialog
           open={open}
           onClose={handleClose}
@@ -280,4 +280,5 @@ export default function Popup({ count, tracks, setTracks }) {
       </ThemeProvider>
     </div>
   );
-}
+};
+export default memo(Popup);

@@ -176,7 +176,8 @@
         gap: 2rem !important;
     }
 
-    .MuiButtonBase-root.MuiButton-root.raider-button {
+    .MuiButtonBase-root.MuiButton-root.raider-button,
+    .songs-list-link__download {
         width: 16.2rem;
     }
 
@@ -299,7 +300,12 @@
 
     .songs-list__song-row {
         font-size: 12px !important;
-        padding: 0.75rem 0.75rem !important;
+        padding: 0.75rem 0.9rem !important;
+
+        &:last-child {
+            margin-bottom: 0.5rem !important;
+
+        }
 
         &.checked {
             border-radius: 7px !important;
@@ -347,6 +353,10 @@
         }
     }
 
+    // .MuiSlider-root {
+    //     padding: 1rem !important;
+    //     width: 83% !important;
+    // }
 
 }
 

@@ -156,7 +156,7 @@ function Navbar() {
                   </MenuItem>
                 </Link>
                 <Link
-                  to="raiders"
+                  to="prices"
                   spy={true}
                   smooth={true}
                   offset={-80}
@@ -166,7 +166,7 @@ function Navbar() {
                     onClick={handleMenuClose}
                     sx={{ fontFamily: 'unset', justifyContent: 'center' }}
                   >
-                    Райдеры
+                    Цены
                   </MenuItem>
                 </Link>
                 <Divider sx={{ borderColor: '#ffffff07' }} />
@@ -205,7 +205,7 @@ function Navbar() {
                 <NavItem name="О нас" link="about" />
                 <NavItem name="Видео" link="video" />
                 <NavItem name="Репертуар" link="songs-list" />
-                <NavItem name="Райдеры" link="raiders" />
+                <NavItem name="Цены" link="prices" />
               </ul>
             </nav>
             <Socials />

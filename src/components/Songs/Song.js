@@ -1,14 +1,12 @@
-import { useEffect, useState, lazy, Suspense } from 'react';
+import { useEffect, useState, memo, useCallback } from 'react';
+import SongWithAudio from './SongWithAudio';
 
-const SongWithoutAudio = lazy(() => import('./SongWithoutAudio'));
-const SongWithAudio = lazy(() => import('./SongWithAudio'));
-function Song({ author, song, length, src, tracks, addSongHandler }) {
-  // const { tracks } = useContext(TracksContext);
+const Song = ({ author, song, length, src, tracks, addSongHandler }) => {
   const [checked, setChecked] = useState(false);
 
-  const handleToggle = () => {
+  const handleToggle = useCallback(() => {
     addSongHandler(author, song, length);
-  };
+  }, [addSongHandler, author, length, song]);
 
   useEffect(() => {
     setChecked(
@@ -17,24 +15,25 @@ function Song({ author, song, length, src, tracks, addSongHandler }) {
       })
     );
   }, [tracks, song]);
-
-  if (!src) {
-    return (
-      <Suspense>
-        <SongWithoutAudio
-          {...{ checked, author, song, length, handleToggle }}
-        />
-      </Suspense>
-    );
-  }
-
   return (
-    <Suspense>
-      <SongWithAudio
-        {...{ checked, author, song, length, handleToggle, src }}
-      />
-    </Suspense>
+    <li
+      className={`songs-list__song-row ${checked ? 'checked' : ''}`}
+      onClick={handleToggle}
+    >
+      <div className="songs-list__author">{author}</div>
+      <div className="songs-list__song">{song}</div>
+      <div className="songs-list__length">{length.replace('.', ':')}</div>
+      {src ? (
+        <SongWithAudio {...{ src }} />
+      ) : (
+        <div className="songs-list__play-button-no-audio">
+          <div className="song-list__no-audio-text">нет аудиозаписи</div>
+        </div>
+      )}
+    </li>
   );
-}
+};
 
-export default Song;
+export default memo(Song, (prevProps, nextProps) => {
+  return prevProps.tracks === nextProps.tracks;
+});

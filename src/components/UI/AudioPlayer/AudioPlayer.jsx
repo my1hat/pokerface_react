@@ -6,11 +6,10 @@ const AudioPlayer = ({ src, isPlaying, setIsPlaying }) => {
   const progressBarRef = useRef();
   const [duration, setDuration] = useState(0);
   const [timeProgress, setTimeProgress] = useState(0);
-
   const playAnimationRef = useRef();
 
   const onLoadedMetadata = () => {
-    const seconds = audioRef.current.duration;
+    const seconds = Math.floor(audioRef.current.duration);
     setDuration(seconds);
     progressBarRef.current.max = seconds;
   };
@@ -19,13 +18,9 @@ const AudioPlayer = ({ src, isPlaying, setIsPlaying }) => {
     const currentTime = audioRef.current.currentTime;
     setTimeProgress(currentTime);
     progressBarRef.current.value = currentTime;
-    progressBarRef.current.style.setProperty(
-      '--range-progress',
-      `${(progressBarRef.current.value / duration) * 100}%`
-    );
 
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [audioRef, duration, progressBarRef, setTimeProgress]);
+  }, []);
 
   useEffect(() => {
     if (isPlaying) {
@@ -33,8 +28,9 @@ const AudioPlayer = ({ src, isPlaying, setIsPlaying }) => {
     } else {
       audioRef.current.pause();
     }
+
     playAnimationRef.current = requestAnimationFrame(repeat);
-  }, [isPlaying, audioRef, repeat]);
+  }, [isPlaying, repeat, setIsPlaying]);
 
   const onEnded = () => {
     setIsPlaying(false);
@@ -48,7 +44,16 @@ const AudioPlayer = ({ src, isPlaying, setIsPlaying }) => {
         onEnded={onEnded}
         onLoadedMetadata={onLoadedMetadata}
       ></audio>
-      <ProgressBar {...{ progressBarRef, audioRef, duration, timeProgress }} />
+      <ProgressBar
+        {...{
+          progressBarRef,
+          audioRef,
+          duration,
+          timeProgress,
+          setDuration,
+          setTimeProgress,
+        }}
+      />
     </>
   );
 };

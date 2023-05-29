@@ -47,7 +47,12 @@ function Video() {
             нашем канале youtube
           </a>{' '}
           и в{' '}
-          <a className="paragraph__link_blue " href="#contacts">
+          <a
+            className="paragraph__link_blue "
+            href="https://vk.com/pokerfacecoverband"
+            target="_blank"
+            rel="noreferrer"
+          >
             соц.сетях.
           </a>
         </motion.p>

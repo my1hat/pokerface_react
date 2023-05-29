@@ -12,15 +12,15 @@ function Contacts() {
   return (
     <Section addClass="contacts" id="contacts">
       <Container>
-        <motion.h2
+        {/* <motion.h2
           className="section-title"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           Контакты
-        </motion.h2>
-        <motion.p
+        </motion.h2> */}
+        {/* <motion.p
           className="paragraph"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -28,7 +28,7 @@ function Contacts() {
         >
           Свяжитесь с нами, чтобы получить полную информацию о цене, свободна ли
           дата и прочие условия.
-        </motion.p>
+        </motion.p> */}
         <div className="contacts__wrapper">
           {/* <Form /> */}
           <TiltParalax classEnter="contacts__card">

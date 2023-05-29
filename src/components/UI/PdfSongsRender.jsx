@@ -9,13 +9,14 @@ import {
   Link,
   Font,
 } from '@react-pdf/renderer';
-import fontFam from '../../fonts/source-sans-pro-v21-latin_cyrillic-300.ttf';
+import { memo } from 'react';
+import fontFam from '../../fonts/source-sans-pro-v21-latin_cyrillic-regular.ttf';
 import fontBold from '../../fonts/source-sans-pro-v21-latin_cyrillic-600.ttf';
 import myImg from '../../images/PokerFace_logo_for_pdf.png';
 Font.register({
   family: 'boty',
   fonts: [
-    { src: fontFam, fontWeight: 300 },
+    { src: fontFam, fontWeight: 400 },
     { src: fontBold, fontWeight: 600 },
   ],
 });
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   page: {
     color: 'rgba(0,0,0,0.87)',
     fontFamily: 'boty',
-    fontWeight: 300,
+    fontWeight: 400,
     padding: '30 30 60 30',
   },
   section: {
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
   fontSong: {
-    color: '#777',
+    color: 'rgba(0,0,0,0.87)',
   },
   pageNumber: {
     position: 'absolute',
@@ -196,4 +197,4 @@ const PdfSongsRender = ({ ruSongs, engSongs }) => (
   // </PDFViewer>
 );
 
-export default PdfSongsRender;
+export default memo(PdfSongsRender);
