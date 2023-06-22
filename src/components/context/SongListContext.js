@@ -1,9 +1,7 @@
 import { createContext } from 'react';
 
-const SongListContext = createContext({
-  ruSongs: '',
-  engSongs: '',
-  setRuSongs: () => {},
-  setEngSongs: () => {},
+const currentSongPlayingContext = createContext({
+  currentSongPlaying: '',
+  setCurrentSongPlaying: () => {},
 });
-export default SongListContext;
+export default currentSongPlayingContext;

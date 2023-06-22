@@ -45,7 +45,7 @@
     "author": "Билан Дима",
     "song": "Держи",
     "length": "3.44",
-    "src": "",
+    "src": "https://pokerfaceband.ru/example_tracks/derzhi.mp3",
     "type": "Отечественные"
   },
   {
@@ -60,6 +60,20 @@
     "song": "Девушки как звёзды",
     "length": "3.59",
     "src": "https://pokerfaceband.ru/example_tracks/gubin.mp3",
+    "type": "Отечественные"
+  },
+  {
+    "author": "Губин Андрей",
+    "song": "Ночь",
+    "length": "3.40",
+    "src": "",
+    "type": "Отечественные"
+  },
+  {
+    "author": "Dabro",
+    "song": "Юность",
+    "length": "3.41",
+    "src": "https://pokerfaceband.ru/example_tracks/unost.mp3",
     "type": "Отечественные"
   },
   {
@@ -248,7 +262,7 @@
     "author": "Hi-Fi",
     "song": "Седьмой лепесток",
     "length": "3.12",
-    "src": "",
+    "src": "https://pokerfaceband.ru/example_tracks/lepestok.mp3",
     "type": "Отечественные"
   },
   {
@@ -421,9 +435,9 @@
   },
   {
     "author": "Michel Telo",
-    "song": "Ai Se Eu Te Pego",
+    "song": "Nosa",
     "length": "2.49",
-    "src": "",
+    "src": "https://pokerfaceband.ru/example_tracks/nosa.mp3",
     "type": "Зарубежные"
   },
   {

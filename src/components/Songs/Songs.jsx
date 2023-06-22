@@ -1,6 +1,6 @@
 import './Songs.scss';
+import { useCallback, memo } from 'react';
 import Accordion from '@mui/material/Accordion';
-import { useCallback } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -29,8 +29,8 @@ const Songs = ({
   engSongs,
   tracks,
   setTracks,
-  isPlaying,
-  setIsPlaying,
+  srcSong,
+  setSrcSong,
 }) => {
   // const [isLoading, setIsLoading] = useState(true);
 
@@ -76,8 +76,8 @@ const Songs = ({
                           tracks,
                           setTracks,
                           addSongHandler,
-                          isPlaying,
-                          setIsPlaying,
+                          srcSong,
+                          setSrcSong,
                         }}
                         key={song.song}
                         {...song}
@@ -91,8 +91,8 @@ const Songs = ({
                           tracks,
                           setTracks,
                           addSongHandler,
-                          isPlaying,
-                          setIsPlaying,
+                          srcSong,
+                          setSrcSong,
                         }}
                         key={song.song}
                         {...song}
@@ -106,4 +106,4 @@ const Songs = ({
     </>
   );
 };
-export default Songs;
+export default memo(Songs);

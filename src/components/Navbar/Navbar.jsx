@@ -155,7 +155,7 @@ function Navbar() {
                     Репертуар
                   </MenuItem>
                 </Link>
-                <Link
+                {/* <Link
                   to="prices"
                   spy={true}
                   smooth={true}
@@ -168,7 +168,7 @@ function Navbar() {
                   >
                     Цены
                   </MenuItem>
-                </Link>
+                </Link> */}
                 <Divider sx={{ borderColor: '#ffffff07' }} />
                 <MenuItem //Logo
                   centerRipple
@@ -205,7 +205,7 @@ function Navbar() {
                 <NavItem name="О нас" link="about" />
                 <NavItem name="Видео" link="video" />
                 <NavItem name="Репертуар" link="songs-list" />
-                <NavItem name="Цены" link="prices" />
+                {/* <NavItem name="Цены" link="prices" /> */}
               </ul>
             </nav>
             <Socials />

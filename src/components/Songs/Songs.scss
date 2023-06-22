@@ -1,6 +1,7 @@
 @import '../../styles/fonts.scss';
 @import '../../styles/variables.scss';
 
+
 .songs {
     background: $bkrndLight;
 }
@@ -238,4 +239,29 @@
         background-color: #f5f5f5;
 
     }
+}
+
+.audioplayer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 103;
+
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+    }
+}
+
+.close-button-audioplayer {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    align-self: flex-end;
+    margin-bottom: 0.3rem;
+
 }

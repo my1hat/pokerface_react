@@ -68,6 +68,11 @@
     .paragraph {
         padding: 0 15%;
     }
+
+    .MuiButtonBase-root.MuiButton-root.raider-button,
+    .songs-list-link__download {
+        width: 16.2rem;
+    }
 }
 
 @media screen and (max-width: 980px) {
@@ -128,6 +133,10 @@
 
     }
 
+    .audioplayer__container {
+        width: 100% !important;
+    }
+
     // .navbar__logo {
     //     display: none;
     // }
@@ -176,10 +185,7 @@
         gap: 2rem !important;
     }
 
-    .MuiButtonBase-root.MuiButton-root.raider-button,
-    .songs-list-link__download {
-        width: 16.2rem;
-    }
+
 
     .MuiAccordionDetails-root {
         padding: 0.3rem 0.3rem !important;

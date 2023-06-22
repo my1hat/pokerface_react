@@ -14,7 +14,7 @@ import Features from './components/Content/Features';
 import SongList from './components/Content/SongList';
 import Contacts from './components/Content/Contacts';
 import Footer from './components/Content/Footer';
-import Services from './components/Content/Services';
+// import Services from './components/Content/Services';
 const Video = lazy(() => import('./components/Content/Video'));
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         </Suspense>
         <Features />
         <SongList />
-        <Services />
+        {/* <Services /> */}
         <Contacts />
       </Wrapper>
       <Footer />
