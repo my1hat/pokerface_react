@@ -4,7 +4,6 @@
 @import './styles/variables.scss';
 
 @mixin h3 {
-  // color: #ffffff;
   @include font(regular);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
@@ -15,14 +14,12 @@
   @include font(extraLight);
   font-size: 1.3rem;
   margin: 0 0 2rem 0;
-  // color: $whiteMedium;
 }
 
 @mixin h2 {
   @include font(regular);
   font-size: 2rem;
   margin-top: 0;
-  // color: #fff;
 }
 
 html {
@@ -39,7 +36,6 @@ body {
 body {
   @include font(extraLight);
   margin: 0;
-  // color: $p;
   box-sizing: border-box;
   background-color: #111;
   overflow: auto;
@@ -52,16 +48,10 @@ body.lock {
 
 .paragraph {
   @include p;
-  // padding: 0 10rem;
   text-align: center;
   padding: 0 15%;
   line-height: 1.3;
 }
-
-// span {
-//   @include p;
-//   margin: 0;
-// }
 
 .section-title {
   @include h2;
@@ -89,23 +79,16 @@ ul {
   margin: 0;
 }
 
-// .wrapper {
-//   padding-top: 4rem;
-// }
 .cursor {
   font-size: 1.3rem;
   background: #111;
   color: transparent;
 }
 
-
-// .main__title {
-//   @include h2;
-//   font-size: 2.75rem;
-//   color: #ff4545d9;
-// }
-
-
+.container {
+  padding: 2rem 14rem;
+  max-width: 100%;
+}
 
 .about,
 .video,
@@ -154,12 +137,22 @@ html:root {
   }
 }
 
+.MuiAccordion-root.Mui-expanded {
+  width: 40rem;
+}
+
+.MuiPaper-root.MuiAccordion-root.Mui-expanded {
+  margin: auto;
+}
+
 .MuiButtonBase-root.MuiButton-root {
   text-transform: capitalize;
-  // font-family: inherit;
   @include font(regular);
 }
 
 .MuiButtonBase-root.MuiButton-root.raider-button {
   width: 15rem;
 }
+
+//Медиазапросы
+@import './styles/media_rules.scss';

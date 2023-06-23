@@ -1,0 +1,256 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.intro {
+    background: url(../../images/head_photo.jpg) #202020;
+    // background-attachment: fixed;
+    // background-position: 50% 0%;
+    background-size: 100% 128%;
+    background-repeat: no-repeat;
+    // background-blend-mode: exclusion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: stretch;
+    // min-height: calc(100vh + 50pt);
+    min-height: 100vh;
+    color: black;
+    margin-top: 5rem;
+    // row-gap: 1rem;
+}
+
+.titles {
+    width: 50%;
+    margin: 20% auto 0 auto;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        // border-top: 50px solid red;
+        border-bottom: 8rem solid #ffffff;
+        border-right: 0.4rem solid transparent;
+        border-left: 1.2rem solid transparent;
+        position: absolute;
+        left: 25%;
+        top: -7rem;
+
+    }
+
+    &::after {
+        content: '';
+        width: 0.8rem;
+        height: 1.4rem;
+        background-color: #ffffff;
+        position: absolute;
+        right: 40%;
+        top: 33%;
+    }
+
+
+}
+
+.titlesMain,
+.titlesDesc {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 2rem;
+    text-align: right;
+    margin: 0 0 0.5rem 0;
+    border-radius: 0.5rem;
+    @include font(regular);
+}
+
+.titlesMain {
+    padding: 0 1rem 0.4rem 1rem;
+}
+
+// .titles__div-desc {}
+
+.titlesDesc {
+    position: relative;
+    left: 7rem;
+    font-size: 1.3rem;
+    // font-weight: 200;
+    // float: right;
+    // margin: auto;
+    padding: 0.5rem 1rem 0.8rem 1rem;
+    width: 23rem;
+    line-height: 1.3;
+}
+
+.introButton {
+    width: 12rem;
+    height: 3rem;
+}
+
+//Медиазапросы ----------------------------------------
+@media screen and (max-width: 1400px) {
+
+    .intro {
+        background-size: 120% 120%;
+        background-position: 50% 0%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro {
+        background-size: 130% 115%;
+        background-position: 50% 0%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .intro {
+        background-size: 120% 110%;
+        // background-position: top;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    .intro {
+        background-attachment: unset;
+        background-size: cover;
+        background-position: 50% 0%;
+        min-height: 80vh;
+        margin-top: 3.7rem;
+    }
+
+    .titles {
+        width: auto;
+
+        &Desc {
+            left: 5rem;
+        }
+
+        &::after {
+            right: 25%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 625px) {
+    .titles {
+        &::before {
+            border-bottom: 5rem solid #ffffff;
+            top: -4.1rem;
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .intro {
+        min-height: 70vh;
+        background-size: 167% 110%;
+        background-position: 50% 0%;
+    }
+
+    .titles {
+
+        &::after {
+            top: 28%;
+        }
+
+        &Main {
+            font-size: 1.5rem;
+        }
+
+        &Desc {
+            font-size: 1.2rem;
+
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .intro {
+        min-height: 70vh;
+        background-size: 170vw 70vh;
+        background-position: 50% 50%;
+    }
+
+    .titles {
+        display: flex;
+        width: 85%;
+        flex-direction: column;
+        min-width: 0;
+
+        &::before {
+            left: 25%;
+            top: -1.3rem;
+            border-bottom: 1.7rem solid #ffffff;
+        }
+
+        &::after {
+            top: 26%;
+            height: 1.7rem;
+        }
+
+        &Main {
+            font-size: 1.6rem;
+            letter-spacing: -1.2px;
+            font-weight: 500;
+        }
+
+        &Desc {
+            left: 1.8rem;
+            font-weight: normal;
+            // font-size: 1.1rem ;
+            font-size: 1.1rem;
+            max-width: 18rem;
+            min-width: 0;
+            letter-spacing: -0.7px;
+        }
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .intro {
+        min-height: 100vh;
+        background-size: 120vw 120vh;
+        background-position: 50% 0%;
+        margin-top: 3.7rem;
+    }
+
+    .titles {
+        display: flex;
+        width: 58%;
+        flex-direction: column;
+        min-width: 0;
+        margin: 20% auto 0 auto;
+
+        &::before {
+            left: 27%;
+            top: -2rem;
+            border-bottom: 2rem solid #ffffff;
+        }
+
+        &::after {
+            top: 26%;
+            height: 1.6rem;
+        }
+
+        &Main {
+            font-size: 1.5rem;
+            font-weight: normal;
+            letter-spacing: -0.8px;
+        }
+
+        &Desc {
+            font-weight: normal;
+            // position: static;
+            font-size: 1.1rem;
+            max-width: 18rem;
+            min-width: 0;
+            letter-spacing: -1px;
+        }
+    }
+}

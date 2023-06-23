@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.socialsWrapper {
+    align-self: center;
+    line-height: 1;
+    justify-self: unset;
+    margin: 0 2rem 0 2rem;
+
+    .socialsItem {
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+        padding: 0;
+        margin-right: 0.3rem;
+        opacity: 0.4;
+        transition: opacity 0.2s ease-in-out;
+        cursor: pointer;
+
+        &:nth-child(5) {
+            margin-right: 0;
+        }
+
+
+        &:hover {
+            opacity: 1;
+
+            .vkIcon {
+                color: #5181bb;
+            }
+
+            .ytIcon {
+                color: red;
+            }
+
+            .tgIcon {
+                color: rgb(90, 132, 216);
+            }
+
+            .igIcon {
+                color: rgb(224, 107, 228);
+            }
+
+            .waIcon {
+                color: rgb(22, 204, 22);
+            }
+        }
+
+        .socialsIcon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: $bkrndNavBar;
+            font-size: 1rem;
+            line-height: 1rem;
+            transform: translate(-50%, -50%);
+
+
+        }
+    }
+}

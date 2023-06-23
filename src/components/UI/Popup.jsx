@@ -18,7 +18,8 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import Box from '@mui/material/Box';
 import CartIcon from './CartIcon';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import './Popup.scss';
+import songStyles from '../Song_page/SongList.module.scss';
+import popupStyles from './Popup.module.scss';
 
 const Popup = ({ count, tracks, setTracks }) => {
   const [open, setOpen] = useState(false);
@@ -112,7 +113,10 @@ const Popup = ({ count, tracks, setTracks }) => {
           maxWidth="md"
           fullScreen={matches}
         >
-          <DialogTitle className="popup__header" sx={{ fontFamily: 'unset' }}>
+          <DialogTitle
+            className={popupStyles.popupHeader}
+            sx={{ fontFamily: 'unset' }}
+          >
             Ваш сет-лист
             <IconButton
               aria-label="close"
@@ -124,9 +128,9 @@ const Popup = ({ count, tracks, setTracks }) => {
             </IconButton>
           </DialogTitle>
           <DialogContent>
-            <ul className="popup-titles">
+            <ul className={popupStyles.titles}>
               <li className="popup-titles__row">
-                <span className="popup__title-song">Композиция</span>
+                <span className={popupStyles.titleSong}>Композиция</span>
                 {/* <span className="popup__title-length ">Длительность</span> */}
               </li>
             </ul>
@@ -135,16 +139,22 @@ const Popup = ({ count, tracks, setTracks }) => {
                 return (
                   <li
                     key={track.song}
-                    className={`trackItem ${track.hidden ? 'hidden' : ''}`}
+                    className={`${popupStyles.trackItem} ${
+                      track.hidden ? popupStyles.hidden : ''
+                    }`}
                   >
-                    <div className="songs-list__author popup-author">
+                    <div
+                      className={`${songStyles.author} ${popupStyles.author}`}
+                    >
                       {track.author}&nbsp;
                     </div>
-                    <div className="songs-list__song popup-song">
+                    <div className={`${songStyles.song} ${popupStyles.song}`}>
                       &mdash;&nbsp;{track.song}
                     </div>
                     <Tooltip title="удалить">
-                      <div className="songs-list__play-button">
+                      <div
+                        className={`${songStyles.playButton} ${popupStyles.deleteButton}`}
+                      >
                         <IconButton
                           color="inherit"
                           onClick={() => {
@@ -163,7 +173,9 @@ const Popup = ({ count, tracks, setTracks }) => {
                         </IconButton>
                       </div>
                     </Tooltip>
-                    <div className="songs-list__length popup-length">
+                    <div
+                      className={`${songStyles.length} ${popupStyles.length}`}
+                    >
                       {track.length.replace('.', ':')}
                     </div>
                   </li>
@@ -171,18 +183,18 @@ const Popup = ({ count, tracks, setTracks }) => {
               })}
             </ul>
             {tracks.length === 0 && <div className="noTracks">Список пуст</div>}
-            <div className="popup-total">
-              <div className="popup-total__title">Итого:</div>
-              <div className="popup-total__songs">
+            <div className={popupStyles.total}>
+              <div className={popupStyles.totalTitle}>Итого:</div>
+              <div className={popupStyles.totalSongs}>
                 Песен:&nbsp;
-                <span className="popup-total__count">{count}</span>
+                <span className={popupStyles.totalCount}>{count}</span>
               </div>
-              <div className="popup-total__length">
+              <div className={popupStyles.totalLength}>
                 Общее время:&nbsp;
-                <span className="popup-total__count">{totalLength}</span>
+                <span className={popupStyles.totalCount}>{totalLength}</span>
               </div>
             </div>
-            <p className="paragraph after-songs-list">
+            <p className={`paragraph ${popupStyles.conditions}`}>
               &lowast;&nbsp;Минимальная длительность выступления - 90 минут.
               Программу можно разделить на блоки как Вам удобно. Например: 3 по
               30 минут или 2 по 45 минут.
@@ -197,7 +209,7 @@ const Popup = ({ count, tracks, setTracks }) => {
                 margin: '1rem 0 0 0 ',
               }}
             >
-              <p className="paragraph copy-instructions">
+              <p className={`paragraph ${popupStyles.copyInstructions}`}>
                 Скопируйте сет-лист и отправьте его нам прямо сейчас!
               </p>
               <CopyToClipboard text={text}>

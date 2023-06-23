@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.829), #181818), url(../../images/about_bknd.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  color: $white;
+  // &::before {
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   display: block;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color: rgba(0, 0, 0, 0.381);
+  // }
+
+  // min-height: 100vh;
+
+  .container {
+    padding-bottom: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 450px) {
+  .about {
+    background-size: 300% 100%;
+    background-position: 47% 50%;
+  }
+}
